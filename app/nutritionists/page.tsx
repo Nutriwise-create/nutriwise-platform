@@ -36,39 +36,38 @@ return(
 
 
 
-{/* HEADER */}
+{/* PAGE HEADER */}
 
 <section className="header">
 
-<h1>Meet Our Oncology Nutrition Experts</h1>
+<h1>Our Nutritionists</h1>
 
 <p>
-Compassionate professionals dedicated to supporting patients through evidence-based oncology nutrition guidance.
+Our team of oncology nutrition specialists is committed
+to supporting patients with compassionate, evidence-based
+nutritional guidance throughout their treatment journey.
 </p>
 
 </section>
 
 
 
-{/* NUTRITIONISTS */}
+{/* TEAM GRID */}
 
-<section className="cards">
-
+<section className="team">
 
 <div className="card">
 
-<img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2"/>
+<img src="https://randomuser.me/api/portraits/women/44.jpg"/>
 
-<h3>Dr. Aditi Sharma</h3>
+<h3>Dr. Ananya Mehta</h3>
 
-<p className="title">Oncology Nutritionist</p>
+<p className="title">Oncology Nutrition Specialist</p>
 
 <p>
-10+ years experience supporting patients through chemotherapy and recovery nutrition.
-</p>
-
-<p className="tags">
-Chemotherapy Nutrition • Gut Recovery • Strength Building
+Dr. Ananya has spent years guiding cancer patients through
+nutrition strategies that support strength and resilience
+during treatment and recovery.
 </p>
 
 </div>
@@ -77,18 +76,15 @@ Chemotherapy Nutrition • Gut Recovery • Strength Building
 
 <div className="card">
 
-<img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f"/>
+<img src="https://randomuser.me/api/portraits/men/32.jpg"/>
 
-<h3>Dr. Neha Mehta</h3>
+<h3>Rohit Kapoor</h3>
 
-<p className="title">Clinical Oncology Dietitian</p>
+<p className="title">Clinical Nutritionist</p>
 
 <p>
-Specializes in nutrition planning during radiation therapy and treatment recovery.
-</p>
-
-<p className="tags">
-Radiation Nutrition • Weight Management • Immune Support
+Rohit focuses on helping patients maintain energy and
+nutritional balance during chemotherapy and radiation therapy.
 </p>
 
 </div>
@@ -97,40 +93,50 @@ Radiation Nutrition • Weight Management • Immune Support
 
 <div className="card">
 
-<img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d"/>
+<img src="https://randomuser.me/api/portraits/women/65.jpg"/>
 
-<h3>Dr. Kavita Iyer</h3>
+<h3>Dr. Sneha Joshi</h3>
 
-<p className="title">Cancer Recovery Nutrition Expert</p>
+<p className="title">Oncology Diet Specialist</p>
 
 <p>
-Focused on post-treatment recovery and long-term strength rebuilding through nutrition.
-</p>
-
-<p className="tags">
-Recovery Nutrition • Muscle Strength • Energy Restoration
+Sneha believes personalized nutrition can help patients
+navigate treatment side effects and improve recovery outcomes.
 </p>
 
 </div>
 
 
 
-</section>
+<div className="card">
+
+<img src="https://randomuser.me/api/portraits/men/48.jpg"/>
+
+<h3>Arjun Patel</h3>
+
+<p className="title">Clinical Diet Consultant</p>
+
+<p>
+Arjun works closely with patients to develop practical,
+sustainable nutrition plans during treatment.
+</p>
+
+</div>
 
 
 
-{/* TRUST SECTION */}
+<div className="card">
 
-<section className="trust">
+<img src="https://randomuser.me/api/portraits/women/29.jpg"/>
 
-<h2>Why NutriWise Nutritionists</h2>
+<h3>Dr. Kavya Sharma</h3>
 
-<div className="trustGrid">
+<p className="title">Oncology Nutrition Expert</p>
 
-<div>✔ Specialized in Oncology Nutrition</div>
-<div>✔ Evidence-Based Nutrition Guidance</div>
-<div>✔ Personalized Patient Care</div>
-<div>✔ Continuous Support During Treatment</div>
+<p>
+Kavya focuses on strengthening immunity and recovery
+through carefully structured nutritional support.
+</p>
 
 </div>
 
@@ -145,7 +151,8 @@ Recovery Nutrition • Muscle Strength • Energy Restoration
 <img src="/lotus.png" className="lotus"/>
 
 <p>
-NutriWise – Supporting patients with compassionate oncology nutrition guidance
+NutriWise is committed to supporting cancer patients
+through compassionate oncology nutrition guidance.
 </p>
 
 </footer>
@@ -156,11 +163,11 @@ NutriWise – Supporting patients with compassionate oncology nutrition guidance
 
 <div className="floaters">
 
-<a href="https://wa.me/" target="_blank">
+<a href="https://wa.me/918320867088" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"/>
 </a>
 
-<a href="https://instagram.com" target="_blank">
+<a href="https://instagram.com/nutriwise_26" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png"/>
 </a>
 
@@ -176,7 +183,7 @@ NutriWise – Supporting patients with compassionate oncology nutrition guidance
 <img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png"/>
 </a>
 
-<a href="mailto:join.nutriwise@outlook.com">
+<a href="mailto:join.nutriwise@outlook.com" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png"/>
 </a>
 
@@ -192,102 +199,108 @@ padding:40px;
 
 background:linear-gradient(
 180deg,
-#fff7fb 0%,
-#f3ecff 35%,
-#efe8ff 65%,
-#fdf4ff 100%
+#fff7fb,
+#f3ecff,
+#efe8ff,
+#fdf4ff
 );
 
 color:#4a3ca6;
 }
 
+
+
 .nav{
 display:flex;
 justify-content:space-between;
-margin-bottom:20px;
 }
 
 .links{
 display:flex;
-gap:28px;
-font-weight:500;
+gap:25px;
+flex-wrap:wrap;
 }
+
+
 
 .logoWrap{
 display:flex;
 justify-content:center;
-margin-bottom:40px;
+margin:40px 0;
 }
 
 .logo{
-width:280px;
-filter:drop-shadow(0 0 30px rgba(180,120,255,0.6));
+width:260px;
+filter:drop-shadow(0 0 30px rgba(200,150,255,0.6));
 }
+
+
 
 .header{
 text-align:center;
-max-width:800px;
-margin:60px auto;
+max-width:700px;
+margin:auto;
+margin-bottom:60px;
 }
 
-.cards{
+
+
+.team{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:40px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 max-width:1000px;
-margin:80px auto;
+margin:auto;
 }
+
+
 
 .card{
 background:white;
-padding:30px;
-border-radius:20px;
+padding:25px;
+border-radius:15px;
 text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
+
+
 .card img{
-width:120px;
-height:120px;
+width:90px;
+height:90px;
 border-radius:50%;
-object-fit:cover;
-margin-bottom:15px;
+margin-bottom:10px;
 }
+
+
 
 .title{
 font-weight:600;
 margin-bottom:10px;
 }
 
-.tags{
-font-size:14px;
-}
 
-.trust{
-text-align:center;
-margin:100px auto;
-max-width:900px;
-}
-
-.trustGrid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-margin-top:30px;
-}
 
 .footer{
-margin-top:100px;
-padding:50px;
+margin-top:80px;
 text-align:center;
-background:linear-gradient(180deg,#d8c8ff,#b9a2ff);
-border-radius:25px;
+padding:30px;
+
+background:linear-gradient(
+180deg,
+#f3ecff,
+#efe8ff
+);
+
+border-radius:20px;
 }
 
 .lotus{
 width:70px;
 margin-bottom:10px;
 }
+
+
 
 .floaters{
 position:fixed;
@@ -312,6 +325,22 @@ justify-content:center;
 width:22px;
 height:22px;
 filter:brightness(0) invert(1);
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.page{
+padding:20px;
+}
+
+.logo{
+width:200px;
+}
+
 }
 
 `}</style>

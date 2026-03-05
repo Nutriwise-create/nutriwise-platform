@@ -17,28 +17,28 @@ const testimonials=[
 {
 name:"Priya Mehta",
 city:"Mumbai",
-image:"https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200",
+image:"https://randomuser.me/api/portraits/women/65.jpg",
 text:"Nutrition guidance helped me regain strength during chemotherapy."
 },
 
 {
 name:"Ramesh Shah",
 city:"Delhi",
-image:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200",
+image:"https://randomuser.me/api/portraits/men/44.jpg",
 text:"Nutrition support helped me maintain energy during treatment."
 },
 
 {
 name:"Anjali Iyer",
 city:"Chennai",
-image:"https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200",
+image:"https://randomuser.me/api/portraits/women/48.jpg",
 text:"Dietary guidance helped me manage treatment side effects."
 },
 
 {
 name:"Arjun Nair",
 city:"Bangalore",
-image:"https://images.unsplash.com/photo-1552058544-f2b08422138a?w=200",
+image:"https://randomuser.me/api/portraits/men/52.jpg",
 text:"Nutrition support improved my recovery journey."
 }
 
@@ -68,13 +68,7 @@ return(
 {/* LOGO */}
 
 <div className="logoWrap">
-
-<img
-src="/Logo.png"
-alt="NutriWise"
-className="logo"
-/>
-
+<img src="/Logo.png" alt="NutriWise Logo" className="logo"/>
 </div>
 
 
@@ -101,14 +95,16 @@ strength, healing and dignity throughout the cancer journey.
 <h2>Why Right Nutrition Matters</h2>
 
 <p>
-Cancer treatment places enormous stress on the body.
-Chemotherapy, radiation therapy and surgery often cause fatigue,
-appetite loss and digestive discomfort.
+Cancer treatment places enormous stress on the body. Chemotherapy,
+radiation therapy and surgery often cause fatigue, appetite loss,
+digestive discomfort and weakness.
 </p>
 
 <p>
-Balanced oncology nutrition helps maintain strength,
-improve immunity and support recovery during treatment.
+Proper oncology nutrition helps maintain muscle strength,
+support immune function and improve recovery during treatment.
+Nutrition does not replace medical treatment — it supports
+the body so treatment can work more effectively.
 </p>
 
 </section>
@@ -221,9 +217,7 @@ Patients Supported: 124
 <img src="/lotus.png" className="lotus"/>
 
 <p className="tagline">
-
 NutriWise – Supporting patients with compassionate oncology nutrition guidance
-
 </p>
 
 <div className="policies">
@@ -256,16 +250,15 @@ information required to provide nutrition guidance.
 
 {policy==="refund" &&(
 <p>
-Refunds are available if requested within 10 days of purchase.
-Refunds may not be granted if consultations are completed
-or services delivered.
+Refund requests can be raised within 10 days of purchase.
+Refunds may not be granted if services have already been delivered.
 </p>
 )}
 
 {policy==="legal" &&(
 <p>
-NutriWise provides nutritional guidance and educational support.
-Our services do not replace professional medical advice.
+NutriWise provides nutrition guidance for supportive care.
+This service does not replace medical advice from oncologists.
 </p>
 )}
 
@@ -298,12 +291,37 @@ padding:30px;
 
 background:linear-gradient(
 180deg,
-#ffe6f3,
-#e9dcff,
-#c7b2ff
+#fff7fb 0%,
+#f6efff 40%,
+#efe9ff 70%,
+#fdf4ff 100%
 );
 
-color:#4b2ca3;
+color:#5b3dbf;
+}
+
+.page::before{
+content:"";
+position:fixed;
+top:-200px;
+right:-200px;
+width:500px;
+height:500px;
+background:radial-gradient(circle,rgba(210,170,255,0.35),transparent);
+filter:blur(80px);
+z-index:-1;
+}
+
+.page::after{
+content:"";
+position:fixed;
+bottom:-200px;
+left:-200px;
+width:500px;
+height:500px;
+background:radial-gradient(circle,rgba(255,180,220,0.35),transparent);
+filter:blur(80px);
+z-index:-1;
 }
 
 .nav{
@@ -322,11 +340,10 @@ display:flex;
 justify-content:center;
 margin-top:10px;
 margin-bottom:10px;
-position:relative;
 }
 
 .logo{
-width:260px;
+width:280px;
 filter:drop-shadow(0 0 40px rgba(180,120,255,0.6));
 }
 

@@ -9,7 +9,7 @@ return(
 <main className="page">
 
 
-{/* NAVBAR */}
+{/* NAVIGATION */}
 
 <nav className="nav">
 
@@ -43,9 +43,10 @@ return(
 <h1>Stories of Strength</h1>
 
 <p>
-Inspiration from individuals who faced cancer with courage,
-resilience and hope. Their journeys remind us that strength
-is possible even during the most difficult battles.
+Every cancer journey is unique. Behind every diagnosis lies a
+story of courage, resilience and hope. These stories remind us
+that strength often reveals itself in the most difficult moments
+of life.
 </p>
 
 </section>
@@ -57,106 +58,169 @@ is possible even during the most difficult battles.
 <section className="stories">
 
 
-{/* Story */}
+{/* STORY */}
 
-<div className="storyCard">
+<div className="story">
 
-<h3>Yuvraj Singh</h3>
+<img src="https://randomuser.me/api/portraits/women/44.jpg"/>
 
-<p className="subtitle">Cricket Legend • Cancer Survivor</p>
+<div>
 
-<p>
-In 2011, at the peak of his cricket career, Yuvraj Singh was diagnosed with a rare form of cancer called mediastinal seminoma.
-Despite battling severe fatigue and breathing issues during the World Cup, he continued to perform for India.
-</p>
+<h3>Hina Khan</h3>
 
-<p>
-After the tournament, he underwent chemotherapy in the United States. The journey was physically and emotionally exhausting, but his determination remained strong.
-</p>
+<p className="subtitle">Actor • Story of Courage</p>
 
 <p>
-Yuvraj returned to professional cricket after recovery and later founded the YouWeCan Foundation to support cancer patients across India.
-His story continues to inspire millions around the world.
+Hina Khan has spoken openly about her health challenges,
+showing the world that vulnerability and strength can
+coexist. Her courage inspired thousands of people who
+were silently fighting their own battles.
 </p>
+
+<div className="timeline">
+
+<span>Diagnosis</span>
+<div className="line"></div>
+<span>Treatment</span>
+<div className="line"></div>
+<span>Recovery</span>
+
+</div>
+
+</div>
 
 </div>
 
 
 
-{/* Story */}
+<div className="story">
 
-<div className="storyCard">
+<img src="https://randomuser.me/api/portraits/women/65.jpg"/>
+
+<div>
 
 <h3>Sonali Bendre</h3>
 
 <p className="subtitle">Actor • Cancer Survivor</p>
 
 <p>
-In 2018, Bollywood actor Sonali Bendre publicly revealed that she had been diagnosed with metastatic cancer.
-She chose to share her journey openly, documenting both the emotional and physical challenges of treatment.
+Sonali Bendre's journey reminded millions that hope can
+exist even in the darkest moments. Her openness about
+treatment and recovery created awareness and empathy
+across the world.
 </p>
 
-<p>
-Her courage in speaking about vulnerability, fear and hope created a powerful support system for many others facing similar diagnoses.
-</p>
+<div className="timeline">
 
-<p>
-Through her journey, Sonali reminded the world that strength often comes from acceptance and community support.
-</p>
+<span>Diagnosis</span>
+<div className="line"></div>
+<span>Treatment</span>
+<div className="line"></div>
+<span>Recovery</span>
+
+</div>
+
+</div>
 
 </div>
 
 
 
-{/* Story */}
+<div className="story">
 
-<div className="storyCard">
+<img src="https://randomuser.me/api/portraits/men/42.jpg"/>
 
-<h3>Lisa Ray</h3>
+<div>
 
-<p className="subtitle">Actor • Multiple Myeloma Survivor</p>
+<h3>Anurag Basu</h3>
 
-<p>
-Lisa Ray was diagnosed with multiple myeloma, a rare form of blood cancer, in 2009.
-The diagnosis came unexpectedly during a time when her career was thriving.
-</p>
+<p className="subtitle">Director • Survivor</p>
 
 <p>
-After undergoing a stem cell transplant and intensive treatment, Lisa chose to openly share her journey and raise awareness about cancer and mental resilience.
+Anurag Basu’s battle with leukemia became a powerful
+example of resilience. His recovery journey inspired many
+patients to keep believing in recovery.
 </p>
 
-<p>
-Her message emphasizes living with courage and embracing life fully even after facing serious illness.
-</p>
+<div className="timeline">
+
+<span>Diagnosis</span>
+<div className="line"></div>
+<span>Treatment</span>
+<div className="line"></div>
+<span>Recovery</span>
+
+</div>
+
+</div>
 
 </div>
 
 
 
-{/* Story */}
+<div className="story">
 
-<div className="storyCard">
+<img src="https://randomuser.me/api/portraits/men/55.jpg"/>
 
-<h3>Anonymous Patient Story</h3>
+<div>
 
-<p className="subtitle">Breast Cancer Survivor</p>
+<h3>Yuvraj Singh</h3>
 
-<p>
-When Meera (name changed) was diagnosed with breast cancer at the age of 42, the news was overwhelming for her and her family.
-The treatment journey brought fatigue, loss of appetite and emotional stress.
-</p>
+<p className="subtitle">Cricket Champion • Survivor</p>
 
 <p>
-Through medical care, family support and guided nutrition, she slowly regained her strength during treatment.
+Yuvraj Singh’s fight against cancer became one of the
+most inspiring stories in sports. His determination and
+positive outlook helped him overcome tremendous
+challenges.
 </p>
 
-<p>
-Today, she shares her story to remind others that recovery is possible and that support during treatment can make a powerful difference.
-</p>
+<div className="timeline">
+
+<span>Diagnosis</span>
+<div className="line"></div>
+<span>Treatment</span>
+<div className="line"></div>
+<span>Recovery</span>
+
+</div>
+
+</div>
 
 </div>
 
 
+
+<div className="story">
+
+<img src="https://randomuser.me/api/portraits/women/50.jpg"/>
+
+<div>
+
+<h3>A Story of Hope</h3>
+
+<p className="subtitle">Patient Inspiration</p>
+
+<p>
+Every patient who walks the path of cancer treatment
+shows remarkable courage. With compassionate care,
+proper treatment and nutritional support, many people
+rediscover strength they never knew they had.
+</p>
+
+<div className="timeline">
+
+<span>Diagnosis</span>
+<div className="line"></div>
+<span>Treatment</span>
+<div className="line"></div>
+<span>Recovery</span>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -169,7 +233,9 @@ Today, she shares her story to remind others that recovery is possible and that 
 <img src="/lotus.png" className="lotus"/>
 
 <p>
-NutriWise – Supporting patients with compassionate oncology nutrition guidance
+NutriWise stands beside patients and families, offering
+compassionate oncology nutrition support through every
+stage of their journey.
 </p>
 
 </footer>
@@ -180,11 +246,11 @@ NutriWise – Supporting patients with compassionate oncology nutrition guidance
 
 <div className="floaters">
 
-<a href="https://wa.me/" target="_blank">
+<a href="https://wa.me/918320867088" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"/>
 </a>
 
-<a href="https://instagram.com" target="_blank">
+<a href="https://instagram.com/nutriwise_26" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png"/>
 </a>
 
@@ -200,7 +266,7 @@ NutriWise – Supporting patients with compassionate oncology nutrition guidance
 <img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png"/>
 </a>
 
-<a href="mailto:join.nutriwise@outlook.com">
+<a href="mailto:join.nutriwise@outlook.com" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png"/>
 </a>
 
@@ -213,80 +279,111 @@ NutriWise – Supporting patients with compassionate oncology nutrition guidance
 .page{
 font-family:Poppins;
 padding:40px;
-
 background:linear-gradient(
 180deg,
-#fff7fb 0%,
-#f3ecff 35%,
-#efe8ff 65%,
-#fdf4ff 100%
+#fff7fb,
+#f3ecff,
+#efe8ff,
+#fdf4ff
 );
-
 color:#4a3ca6;
 }
+
+
 
 .nav{
 display:flex;
 justify-content:space-between;
-margin-bottom:20px;
 }
 
 .links{
 display:flex;
-gap:28px;
-font-weight:500;
+gap:25px;
+flex-wrap:wrap;
 }
+
+
 
 .logoWrap{
 display:flex;
 justify-content:center;
-margin-bottom:40px;
+margin:40px 0;
 }
 
 .logo{
-width:280px;
-filter:drop-shadow(0 0 30px rgba(180,120,255,0.6));
+width:260px;
 }
+
+
 
 .header{
 text-align:center;
-max-width:800px;
-margin:60px auto;
+max-width:700px;
+margin:auto;
+margin-bottom:60px;
 }
 
-.stories{
-max-width:900px;
-margin:80px auto;
+
+
+.story{
 display:flex;
-flex-direction:column;
-gap:40px;
+gap:25px;
+background:white;
+padding:25px;
+border-radius:15px;
+margin-bottom:30px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
-.storyCard{
-background:white;
-padding:35px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-line-height:1.8;
+.story img{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
 }
+
+
 
 .subtitle{
 font-weight:600;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
+
+
+.timeline{
+display:flex;
+align-items:center;
+gap:10px;
+margin-top:15px;
+}
+
+.line{
+height:2px;
+width:40px;
+background:#6d4df5;
+}
+
+
+
 .footer{
-margin-top:100px;
-padding:50px;
+margin-top:80px;
 text-align:center;
-background:linear-gradient(180deg,#d8c8ff,#b9a2ff);
-border-radius:25px;
+padding:40px;
+
+background:linear-gradient(
+180deg,
+#f3ecff,
+#efe8ff
+);
 }
 
 .lotus{
 width:70px;
 margin-bottom:10px;
 }
+
+
 
 .floaters{
 position:fixed;
@@ -311,6 +408,27 @@ justify-content:center;
 width:22px;
 height:22px;
 filter:brightness(0) invert(1);
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.page{
+padding:20px;
+}
+
+.story{
+flex-direction:column;
+text-align:center;
+}
+
+.story img{
+margin:auto;
+}
+
 }
 
 `}</style>

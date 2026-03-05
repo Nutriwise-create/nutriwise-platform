@@ -19,14 +19,14 @@ date:"",
 time:""
 })
 
-function handleChange(e){
+function handleChange(e:any){
 setForm({
 ...form,
 [e.target.name]:e.target.value
 })
 }
 
-function handleSubmit(e){
+function handleSubmit(e:any){
 e.preventDefault()
 
 if(form.phone.length < 8){
@@ -43,6 +43,9 @@ return(
 
 <main className="page">
 
+
+{/* NAVBAR */}
+
 <nav className="nav">
 
 <div></div>
@@ -53,11 +56,14 @@ return(
 <Link href="/nutritionists">Our Nutritionists</Link>
 <Link href="/stories">Stories of Strength</Link>
 <Link href="/consultation">Book Consultation</Link>
+<Link href="/login">Login</Link>
 </div>
 
 </nav>
 
 
+
+{/* LOGO */}
 
 <div className="logoWrap">
 <img src="/Logo.png" className="logo"/>
@@ -65,16 +71,27 @@ return(
 
 
 
-<section className="formSection">
+{/* PAGE TITLE */}
+
+<section className="header">
 
 <h1>Book a Consultation</h1>
 
 <p>
-Speak with our oncology nutrition experts and receive
-personalized guidance for your journey.
+Speak with our oncology nutrition team and receive compassionate guidance
+to support you during your treatment journey.
 </p>
 
+</section>
+
+
+
+{/* FORM */}
+
+<section className="formSection">
+
 <form onSubmit={handleSubmit} className="form">
+
 
 <input
 name="name"
@@ -82,6 +99,7 @@ placeholder="Full Name"
 required
 onChange={handleChange}
 />
+
 
 <input
 name="age"
@@ -91,12 +109,14 @@ required
 onChange={handleChange}
 />
 
+
 <select name="gender" required onChange={handleChange}>
 <option value="">Gender</option>
 <option>Male</option>
 <option>Female</option>
 <option>Prefer not to say</option>
 </select>
+
 
 
 <input
@@ -107,6 +127,9 @@ required
 onChange={handleChange}
 />
 
+
+
+{/* PHONE */}
 
 <div className="phone">
 
@@ -129,16 +152,22 @@ onChange={handleChange}
 </div>
 
 
+
 <p className="note">
-Your information remains private and is only used to schedule
-your consultation. We respect your time and will only reach out
-regarding your request.
+We understand that every cancer journey is deeply personal.
+Our team is here to support you with compassion and care.
+Your time and privacy matter to us, and we will only reach out
+regarding your consultation request — never with unwanted calls.
 </p>
 
+
+
+{/* CANCER TYPE */}
 
 <select name="cancerType" required onChange={handleChange}>
 
 <option value="">Select Cancer Type</option>
+
 <option>Breast Cancer</option>
 <option>Lung Cancer</option>
 <option>Colon Cancer</option>
@@ -152,11 +181,14 @@ regarding your request.
 </select>
 
 
+
 <input
 name="doctor"
 placeholder="Doctor Name (optional)"
 onChange={handleChange}
 />
+
+
 
 <input
 name="hospital"
@@ -165,6 +197,9 @@ onChange={handleChange}
 />
 
 
+
+{/* DATE */}
+
 <input
 type="date"
 name="date"
@@ -172,6 +207,9 @@ required
 onChange={handleChange}
 />
 
+
+
+{/* TIME */}
 
 <select name="time" required onChange={handleChange}>
 
@@ -206,6 +244,7 @@ onChange={handleChange}
 </select>
 
 
+
 <button type="submit">
 Submit Consultation Request
 </button>
@@ -213,6 +252,39 @@ Submit Consultation Request
 </form>
 
 </section>
+
+
+
+{/* FLOATERS */}
+
+<div className="floaters">
+
+<a href="https://wa.me/918320867088" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"/>
+</a>
+
+<a href="https://instagram.com/nutriwise_26" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733558.png"/>
+</a>
+
+<a href="https://linkedin.com" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733561.png"/>
+</a>
+
+<a href="https://youtube.com" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733646.png"/>
+</a>
+
+<a href="https://x.com" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png"/>
+</a>
+
+<a href="mailto:join.nutriwise@outlook.com" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/732/732200.png"/>
+</a>
+
+</div>
+
 
 
 <style jsx>{`
@@ -241,35 +313,43 @@ margin-bottom:20px;
 .links{
 display:flex;
 gap:28px;
+font-weight:500;
 }
 
 .logoWrap{
 display:flex;
 justify-content:center;
-margin-bottom:40px;
+margin-bottom:30px;
 }
 
 .logo{
 width:280px;
+filter:drop-shadow(0 0 25px rgba(180,120,255,0.5));
+}
+
+.header{
+text-align:center;
+max-width:700px;
+margin:auto;
+margin-bottom:40px;
 }
 
 .formSection{
 max-width:600px;
 margin:auto;
-text-align:center;
 }
 
 .form{
 display:flex;
 flex-direction:column;
-gap:15px;
-margin-top:30px;
+gap:16px;
 }
 
 input,select{
 padding:12px;
-border-radius:8px;
-border:1px solid #ccc;
+border-radius:10px;
+border:1px solid #ddd;
+font-size:14px;
 }
 
 .phone{
@@ -278,26 +358,44 @@ gap:10px;
 }
 
 button{
-
 background:#6d4df5;
 color:white;
-
-padding:12px;
-
+padding:14px;
 border:none;
-
 border-radius:20px;
-
 cursor:pointer;
-
+font-weight:500;
 margin-top:10px;
-
 }
 
 .note{
 font-size:13px;
-color:#666;
-text-align:left;
+color:#6b6b6b;
+}
+
+.floaters{
+position:fixed;
+right:20px;
+top:40%;
+display:flex;
+flex-direction:column;
+gap:16px;
+}
+
+.floaters a{
+background:#5e3ed6;
+width:46px;
+height:46px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.floaters img{
+width:22px;
+height:22px;
+filter:brightness(0) invert(1);
 }
 
 `}</style>

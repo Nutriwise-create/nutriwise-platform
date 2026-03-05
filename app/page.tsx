@@ -1,323 +1,357 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { FaWhatsapp, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa"
-import { FaXTwitter } from "react-icons/fa6"
-import { MdEmail } from "react-icons/md"
+import { useEffect, useState } from "react";
+import { FaLeaf, FaHandsHelping, FaHeartbeat } from "react-icons/fa";
+import { MdHealthAndSafety } from "react-icons/md";
+
+const testimonials = [
+  {
+    name: "Priya Mehta",
+    city: "Mumbai",
+    text: "During chemotherapy I had lost my appetite completely. The nutritional guidance helped me regain strength gradually."
+  },
+  {
+    name: "Ramesh Shah",
+    city: "Delhi",
+    text: "Nutrition support helped me maintain my weight and energy during treatment."
+  },
+  {
+    name: "Meena Iyer",
+    city: "Chennai",
+    text: "The guidance was simple yet powerful during difficult days."
+  },
+  {
+    name: "Arjun Nair",
+    city: "Bangalore",
+    text: "It helped me regain strength slowly during recovery."
+  }
+];
 
 export default function Home() {
 
-const testimonials = [
-{ name:"Priya Mehta", city:"Mumbai", text:"During chemotherapy I had lost my appetite completely. The nutritional guidance helped me regain strength gradually.", img:"https://randomuser.me/api/portraits/women/11.jpg"},
-{ name:"Ramesh Shah", city:"Ahmedabad", text:"Nutrition support helped me maintain my weight and energy during treatment.", img:"https://randomuser.me/api/portraits/men/32.jpg"},
-{ name:"Anita Patel", city:"Surat", text:"Food finally became manageable again. The support felt truly compassionate.", img:"https://randomuser.me/api/portraits/women/65.jpg"},
-{ name:"Kunal Verma", city:"Delhi", text:"I finally understood what my body needed during therapy.", img:"https://randomuser.me/api/portraits/men/71.jpg"},
-{ name:"Meena Iyer", city:"Chennai", text:"The guidance was simple yet powerful during difficult days.", img:"https://randomuser.me/api/portraits/women/44.jpg"},
-{ name:"Arjun Nair", city:"Bangalore", text:"It helped me regain strength slowly during recovery.", img:"https://randomuser.me/api/portraits/men/22.jpg"},
-]
+  const [current, setCurrent] = useState(0);
 
-return (
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % testimonials.length);
+    }, 4000);
 
-<div className="min-h-screen text-gray-800 bg-gradient-to-br from-purple-50 via-pink-50 to-purple-100">
+    return () => clearInterval(interval);
+  }, []);
 
-{/* NAVBAR */}
+  const t = testimonials[current];
 
-<header className="flex justify-end px-10 py-6 text-sm font-medium space-x-6">
+  return (
 
-<a href="#">About Us</a>
-<a href="#">Our Nutritionists</a>
-<a href="#">Stories of Strength</a>
-<a href="#">Book Consultation</a>
-<a href="#">Login</a>
+    <main className="page">
 
-</header>
+      {/* NAVIGATION */}
+      <nav className="nav">
+        <a href="#">About Us</a>
+        <a href="#">Our Nutritionists</a>
+        <a href="#">Stories of Strength</a>
+        <a href="#">Login</a>
+      </nav>
 
 
-{/* LOGO SECTION WITH GLOW */}
+      {/* LOGO */}
+      <div className="logoSection">
+        <img src="/lotus.jpeg" className="logo" />
+        <h1 className="brand">NutriWise</h1>
+      </div>
 
-<div className="flex justify-center items-center py-12 relative">
 
-<div className="absolute w-[320px] h-[320px] bg-purple-400 rounded-full blur-[120px] opacity-30"></div>
-<div className="absolute w-[300px] h-[300px] bg-pink-400 rounded-full blur-[120px] opacity-30"></div>
+      {/* HERO */}
+      <section className="hero">
+        <h2>Medicine treats cancer, but nutrition strengthens your body</h2>
 
-<Image
-src="/logo.png"
-alt="NutriWise"
-width={260}
-height={100}
-className="relative z-10"
-/>
+        <p>
+          Compassionate oncology nutrition guidance designed to support strength,
+          healing and dignity throughout the cancer journey.
+        </p>
+      </section>
 
-</div>
 
+      {/* WHY NUTRITION */}
+      <section className="section">
 
-{/* HERO */}
+        <h3>Why Right Nutrition Matters</h3>
 
-<section className="text-center px-6 pb-20">
+        <p>
+          Cancer treatment places enormous stress on the body. Chemotherapy,
+          radiation therapy, surgery and targeted treatments often bring
+          challenging side effects such as fatigue, nausea, appetite loss,
+          digestive discomfort and muscle weakness.
+        </p>
 
-<h1 className="text-4xl md:text-5xl font-serif text-purple-900 max-w-3xl mx-auto leading-tight">
+        <p>
+          Balanced oncology nutrition helps support immune function, preserve
+          muscle mass, improve treatment tolerance and enhance overall wellbeing.
+          NutriWise supports patients and families with compassionate,
+          evidence-informed nutritional guidance during treatment and recovery.
+        </p>
 
-Medicine treats cancer, but nutrition strengthens your body
+      </section>
 
-</h1>
 
-<p className="mt-6 text-lg max-w-xl mx-auto text-gray-700">
+      {/* WHAT WE PROVIDE */}
+      <section className="section">
 
-Compassionate oncology nutrition guidance designed to support strength,
-healing, and dignity throughout the cancer journey.
+        <h3>What We Provide</h3>
 
-</p>
+        <div className="cards">
 
-</section>
+          <div className="card">
+            <FaLeaf size={45}/>
+            <h4>Personalized Oncology Nutrition</h4>
+            <p>
+              Nutrition plans designed according to cancer type,
+              treatment stage, symptoms and individual health needs.
+            </p>
+          </div>
 
+          <div className="card">
+            <MdHealthAndSafety size={45}/>
+            <h4>Managing Treatment Side Effects</h4>
+            <p>
+              Guidance to support appetite, digestion,
+              fatigue management and maintaining strength.
+            </p>
+          </div>
 
-{/* WHY NUTRITION MATTERS */}
+          <div className="card">
+            <FaHandsHelping size={45}/>
+            <h4>Continuous Nutrition Support</h4>
+            <p>
+              Ongoing compassionate guidance helping patients
+              navigate nutrition with clarity and confidence.
+            </p>
+          </div>
 
-<section className="py-20 px-6 max-w-4xl mx-auto">
+        </div>
 
-<h2 className="text-3xl font-serif text-center text-purple-900 mb-10">
+      </section>
 
-Why Right Nutrition Matters
 
-</h2>
+      {/* TESTIMONIALS */}
+      <section className="section">
 
-<div className="bg-white shadow-xl rounded-2xl p-10 leading-relaxed text-gray-700">
+        <h3>Patient Experiences</h3>
 
-Cancer treatment places enormous stress on the body. Chemotherapy,
-radiation therapy, surgery, and targeted treatments often bring
-challenging side effects such as fatigue, nausea, appetite loss,
-digestive discomfort, and muscle weakness.
+        <div className="testimonial">
 
-During treatment the body requires the right nourishment not only to
-maintain strength but also to recover from therapy.
+          <FaHeartbeat size={28}/>
 
-Balanced oncology nutrition helps support immune function, preserve
-muscle mass, improve treatment tolerance, and enhance overall wellbeing
-throughout therapy.
+          <p className="quote">
+            "{t.text}"
+          </p>
 
-At NutriWise our goal is to support patients and families with
-compassionate, evidence-informed nutritional guidance so that strength,
-healing, and resilience remain possible even during difficult phases
-of treatment.
+          <p className="author">
+            {t.name} — {t.city}
+          </p>
 
-</div>
+        </div>
 
-</section>
+      </section>
 
 
-{/* WHAT WE PROVIDE */}
+      {/* SUPPORT SECTION */}
+      <section className="section support">
 
-<section className="py-20 bg-white">
+        <h3>Support a Patient</h3>
 
-<h2 className="text-3xl font-serif text-center text-purple-900 mb-16">
+        <p>
+          Cancer treatment can be physically and emotionally exhausting.
+          Through the Support a Patient initiative, individuals and
+          organizations can help provide oncology nutrition support
+          to patients who cannot access this guidance.
+        </p>
 
-What We Provide
+        <button className="supportBtn">
+          Support Now
+        </button>
 
-</h2>
+        <p className="counter">
+          Patients Supported: 124
+        </p>
 
-<div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto px-6">
+      </section>
 
-<div className="p-8 rounded-xl shadow hover:shadow-2xl transition bg-gradient-to-br from-purple-50 to-pink-50">
 
-<h3 className="text-xl font-semibold text-purple-800 mb-4">
+      {/* CONTACT */}
+      <section className="section contact">
 
-Personalized Oncology Nutrition
+        <h3>You Can Find Us At</h3>
 
-</h3>
+        <div className="social">
 
-<p>
+          <a href="https://instagram.com" target="_blank">Instagram</a>
+          <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+          <a href="https://youtube.com" target="_blank">YouTube</a>
+          <a href="https://twitter.com" target="_blank">X</a>
 
-Nutrition plans designed according to cancer type, treatment stage,
-symptoms, and individual health needs.
+        </div>
 
-</p>
+        <p>
+          Email :
+          <a href="mailto:join.nutriwise@outlook.com">
+            join.nutriwise@outlook.com
+          </a>
+        </p>
 
-</div>
+      </section>
 
 
-<div className="p-8 rounded-xl shadow hover:shadow-2xl transition bg-gradient-to-br from-purple-50 to-pink-50">
+      {/* FOOTER */}
+      <footer className="footer">
 
-<h3 className="text-xl font-semibold text-purple-800 mb-4">
+        <img src="/lotus.jpeg" className="footerLogo"/>
 
-Managing Treatment Side Effects
+        <div className="policies">
 
-</h3>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/refund-policy">Refund Policy</a>
+          <a href="/legal-disclaimer">Legal Disclaimer</a>
 
-<p>
+        </div>
 
-Guidance to support appetite, digestion, fatigue management,
-and maintaining strength during treatment.
+        <p className="tagline">
+          NutriWise — Supporting patients with compassionate oncology nutrition guidance
+        </p>
 
-</p>
+      </footer>
 
-</div>
 
 
-<div className="p-8 rounded-xl shadow hover:shadow-2xl transition bg-gradient-to-br from-purple-50 to-pink-50">
+<style jsx>{`
 
-<h3 className="text-xl font-semibold text-purple-800 mb-4">
+.page{
+background: linear-gradient(180deg,#f8edff,#fde2f3);
+padding:40px;
+font-family:Poppins, sans-serif;
+color:#333;
+}
 
-Continuous Nutrition Support
+.nav{
+display:flex;
+justify-content:flex-end;
+gap:35px;
+margin-bottom:40px;
+}
 
-</h3>
+.nav a{
+text-decoration:none;
+color:#7b5aa6;
+font-weight:500;
+}
 
-<p>
+.logoSection{
+text-align:center;
+margin-bottom:40px;
+}
 
-Ongoing compassionate guidance helping patients and families
-navigate nutrition with clarity and confidence.
+.logo{
+height:90px;
+filter: drop-shadow(0 0 10px rgba(200,150,255,0.6));
+}
 
-</p>
+.brand{
+font-family:Playfair Display, serif;
+margin-top:10px;
+}
 
-</div>
+.hero{
+text-align:center;
+max-width:850px;
+margin:auto;
+margin-bottom:80px;
+}
 
-</div>
+.section{
+max-width:1000px;
+margin:auto;
+margin-bottom:80px;
+}
 
-</section>
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
 
+.card{
+background:white;
+padding:30px;
+border-radius:16px;
+box-shadow:0 12px 25px rgba(0,0,0,0.08);
+text-align:center;
+}
 
-{/* TESTIMONIALS */}
+.testimonial{
+background:white;
+padding:35px;
+border-radius:16px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
 
-<section className="py-20">
+.quote{
+margin:15px 0;
+}
 
-<h2 className="text-3xl font-serif text-center text-purple-900 mb-16">
+.support{
+text-align:center;
+}
 
-Patient Experiences
+.supportBtn{
+padding:14px 30px;
+border:none;
+border-radius:30px;
+background:#c79cff;
+color:white;
+font-weight:600;
+cursor:pointer;
+margin-top:10px;
+}
 
-</h2>
+.counter{
+margin-top:10px;
+font-weight:600;
+}
 
-<div className="flex overflow-x-auto space-x-8 px-10">
+.social{
+display:flex;
+justify-content:center;
+gap:20px;
+margin-bottom:10px;
+}
 
-{testimonials.map((t,i)=>(
-<div key={i} className="min-w-[260px] bg-white shadow-lg rounded-xl p-6">
+.footer{
+text-align:center;
+margin-top:80px;
+}
 
-<Image
-src={t.img}
-alt={t.name}
-width={60}
-height={60}
-className="rounded-full"
-/>
+.footerLogo{
+height:60px;
+margin-bottom:10px;
+}
 
-<p className="mt-4 text-sm text-gray-700">
+.policies{
+display:flex;
+justify-content:center;
+gap:20px;
+margin-bottom:10px;
+}
 
-"{t.text}"
+.tagline{
+font-size:14px;
+opacity:0.7;
+}
 
-</p>
+`}</style>
 
-<p className="mt-3 font-medium text-sm">
 
-{t.name} – {t.city}
+    </main>
 
-</p>
-
-</div>
-))}
-
-</div>
-
-</section>
-
-
-{/* SUPPORT A PATIENT */}
-
-<section className="py-24 text-center bg-gradient-to-r from-purple-600 to-pink-500 text-white">
-
-<h2 className="text-3xl font-serif mb-6">
-
-Support a Patient
-
-</h2>
-
-<p className="max-w-xl mx-auto mb-10">
-
-Cancer treatment can be physically and emotionally exhausting.
-Through the Support a Patient initiative, individuals and
-organizations can help provide oncology nutrition guidance to
-patients who may otherwise struggle to access this support.
-
-</p>
-
-<button className="bg-white text-purple-700 px-8 py-3 rounded-full font-semibold hover:scale-105 transition">
-
-Support Now
-
-</button>
-
-<div className="mt-8 text-xl">
-
-Patients Supported: <strong>124</strong>
-
-</div>
-
-</section>
-
-
-{/* SOCIAL MEDIA */}
-
-<section className="py-16 text-center">
-
-<h2 className="text-2xl font-serif text-purple-900 mb-8">
-
-You Can Find Us At
-
-</h2>
-
-<div className="flex justify-center space-x-6 text-2xl text-purple-700">
-
-<a href="https://wa.me/918320867088"><FaWhatsapp/></a>
-<a href="https://instagram.com/nutriwise_26"><FaInstagram/></a>
-<a href="https://x.com/NutriWise26"><FaXTwitter/></a>
-<a href="https://www.linkedin.com/company/nutriwise26"><FaLinkedin/></a>
-<a href="https://www.youtube.com/@NutriWise_26"><FaYoutube/></a>
-<a href="mailto:join.nutriwise@outlook.com"><MdEmail/></a>
-
-</div>
-
-</section>
-
-
-{/* FOOTER */}
-
-<footer className="py-10 text-center text-gray-500 text-sm">
-
-<div className="mb-4 space-x-4">
-
-<a href="#">Privacy Policy</a>
-<a href="#">Refund Policy</a>
-<a href="#">Legal Disclaimer</a>
-
-</div>
-
-<Image
-src="/lotus.png"
-alt="Lotus"
-width={60}
-height={60}
-className="mx-auto"
-/>
-
-<p className="mt-4">
-
-NutriWise – Supporting patients with compassionate oncology nutrition guidance.
-
-</p>
-
-</footer>
-
-
-{/* FLOATING WHATSAPP */}
-
-<a
-href="https://wa.me/918320867088"
-className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg"
->
-
-<FaWhatsapp/>
-
-</a>
-
-
-</div>
-
-)
+  );
 }

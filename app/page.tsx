@@ -50,7 +50,7 @@ return(
 
 <main className="page">
 
-{/* NAV */}
+{/* NAVBAR */}
 
 <nav className="nav">
 
@@ -79,6 +79,7 @@ alt="NutriWise"
 width={260}
 height={260}
 priority
+style={{objectFit:"contain"}}
 />
 
 </div>
@@ -100,7 +101,7 @@ strength, healing and dignity throughout the cancer journey.
 </section>
 
 
-{/* WHY */}
+{/* WHY NUTRITION */}
 
 <section className="section">
 
@@ -194,7 +195,7 @@ and recovery, helping patients tolerate treatment better.
 </section>
 
 
-{/* SUPPORT */}
+{/* SUPPORT SECTION */}
 
 <section className="support">
 
@@ -227,13 +228,6 @@ Patients Supported: 124
 {/* FOOTER */}
 
 <footer className="footer">
-
-<Image
-src="/lotus.png"
-alt="lotus"
-width={110}
-height={110}
-/>
 
 <p className="tagline">
 
@@ -279,12 +273,11 @@ information to provide nutrition guidance and communication.
 
 Refunds are available if requested within **10 days of purchase**.
 
-However refunds may not be granted if services have already
-been substantially delivered, consultations completed,
-or where misuse or repeated refund requests are detected.
+Refunds may not be granted if services have already been
+delivered, consultations completed, or misuse is detected.
 
-NutriWise reserves the right to review refund eligibility
-to prevent misuse of services.
+NutriWise reserves the right to review refund requests
+to prevent abuse of services.
 
 </p>
 
@@ -295,8 +288,8 @@ to prevent misuse of services.
 <p>
 
 NutriWise provides nutritional guidance and educational support.
-Our services do not replace diagnosis, treatment or medical
-advice from licensed healthcare professionals.
+Our services do not replace medical advice or treatment from
+licensed healthcare professionals.
 
 </p>
 
@@ -309,7 +302,7 @@ advice from licensed healthcare professionals.
 )}
 
 
-{/* FLOATING ICONS */}
+{/* FLOATING SOCIAL ICONS */}
 
 <div className="floater">
 
@@ -328,14 +321,20 @@ advice from licensed healthcare professionals.
 .page{
 font-family:Poppins;
 padding:40px;
-background:linear-gradient(180deg,#f7efff,#d5c4ff,#b39cff);
+
+background:linear-gradient(
+180deg,
+#fff0f6 0%,
+#f2e6ff 45%,
+#d1b8ff 100%
+);
+
 color:#4e2fa5;
 }
 
 .nav{
 display:flex;
 justify-content:space-between;
-align-items:center;
 }
 
 .navLinks{
@@ -346,7 +345,7 @@ gap:28px;
 .logoWrap{
 display:flex;
 justify-content:center;
-margin:40px 0;
+margin:40px 0 20px 0;
 }
 
 .hero{
@@ -371,7 +370,7 @@ background:white;
 padding:30px;
 border-radius:20px;
 text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
 .carousel{
@@ -428,7 +427,7 @@ cursor:pointer;
 
 .footer{
 text-align:center;
-margin-top:80px;
+margin-top:60px;
 }
 
 .policies{

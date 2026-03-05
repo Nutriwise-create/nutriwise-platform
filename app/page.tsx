@@ -181,7 +181,7 @@ Patients Supported: 124
 
 <footer className="footer">
 
-<img src="/lotus.jpeg" className="lotus"/>
+<img src="/lotus.png" className="lotus"/>
 
 <div className="policies">
 

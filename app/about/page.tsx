@@ -1,108 +1,145 @@
 "use client"
 
+import { useState } from "react"
+
+import { FaLeaf, FaHandsHelping, FaHeart } from "react-icons/fa"
+import { MdHealthAndSafety, MdEmail } from "react-icons/md"
+
 import { FaWhatsapp, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
-import { MdEmail } from "react-icons/md"
 
-export default function About(){
+export default function Home(){
+
+const [policy,setPolicy]=useState("")
+
+const testimonials=[
+
+{
+name:"Priya Mehta",
+city:"Mumbai",
+image:"https://randomuser.me/api/portraits/women/65.jpg",
+text:"Nutrition guidance helped me regain strength during chemotherapy."
+},
+
+{
+name:"Ramesh Shah",
+city:"Delhi",
+image:"https://randomuser.me/api/portraits/men/44.jpg",
+text:"Nutrition support helped me maintain energy during treatment."
+},
+
+{
+name:"Anjali Iyer",
+city:"Chennai",
+image:"https://randomuser.me/api/portraits/women/48.jpg",
+text:"Dietary guidance helped me manage treatment side effects."
+},
+
+{
+name:"Arjun Nair",
+city:"Bangalore",
+image:"https://randomuser.me/api/portraits/men/52.jpg",
+text:"Nutrition support improved my recovery journey."
+}
+
+]
 
 return(
 
 <main className="page">
 
+
 {/* NAVBAR */}
 
 <nav className="nav">
+
 <div></div>
 
 <div className="navLinks">
-<a href="/">Home</a>
+
+<a href="/about">About Us</a>
 <a>Our Nutritionists</a>
 <a>Stories of Strength</a>
 <a>Book Consultation</a>
 <a>Login</a>
+
 </div>
+
 </nav>
+
 
 
 {/* LOGO */}
 
 <div className="logoWrap">
-<img src="/Logo.png" alt="NutriWise" className="logo"/>
+<img src="/Logo.png" alt="NutriWise Logo" className="logo"/>
 </div>
 
 
 
-{/* HOW NUTRIWISE WAS BORN */}
+{/* HERO */}
 
-<section className="section">
+<section className="hero">
 
-<h2>How NutriWise Was Born</h2>
-
-<p>
-NutriWise was born from witnessing something deeply human that often
-goes unnoticed during cancer treatment journeys. While medical teams
-work tirelessly to treat the disease, many patients quietly struggle
-with fatigue, appetite loss, weakness and confusion about what they
-should eat during treatment.
-</p>
+<h1>
+Medicine treats cancer, but nutrition strengthens your body
+</h1>
 
 <p>
-Families often search for answers while trying to support their loved
-ones. Simple questions about food, strength and recovery can become
-overwhelming when reliable guidance is missing.
-</p>
-
-<p>
-NutriWise was created to bring clarity, compassion and structured
-oncology nutrition guidance into that space. The goal is simple —
-to ensure that patients feel supported, informed and stronger during
-their treatment journey.
-</p>
-
-<p>
-At its heart, NutriWise exists to remind patients that nourishment is
-not just about food — it is about strength, dignity and hope.
+Compassionate oncology nutrition guidance designed to support
+strength, healing and dignity throughout the cancer journey.
 </p>
 
 </section>
 
 
 
-{/* FOUNDER MESSAGE */}
+{/* WHY NUTRITION */}
 
-<section className="section founder">
+<section className="section">
 
-<img src="/founder.jpg" className="founderImg"/>
-
-<div>
-
-<h2>Message from the Founder</h2>
+<h2>Why Right Nutrition Matters</h2>
 
 <p>
-Cancer treatment is not only a medical journey — it is an emotional
-and deeply personal experience for patients and families.
+Cancer treatment places enormous stress on the body.
+Chemotherapy, radiation therapy and surgery often cause fatigue,
+appetite loss and digestive discomfort.
 </p>
 
 <p>
-Through the years I have seen how bravely patients endure treatment
-while quietly struggling with fatigue, appetite loss and uncertainty
-about how to nourish their bodies.
+Balanced oncology nutrition helps maintain strength,
+support immunity and improve recovery during treatment.
 </p>
 
-<p>
-NutriWise was created with the hope that no patient should feel
-alone when it comes to understanding nutrition during treatment.
-Our goal is to provide guidance that is compassionate, structured
-and rooted in evidence-based oncology nutrition.
-</p>
+</section>
 
-<p>
-Every patient deserves support, dignity and care throughout their
-healing journey.
-</p>
 
-<strong>— Manali Chandan</strong>
+
+{/* SERVICES */}
+
+<section className="section">
+
+<h2>What We Provide</h2>
+
+<div className="cards">
+
+<div className="card">
+<FaLeaf size={36}/>
+<h3>Personalized Oncology Nutrition</h3>
+<p>Nutrition plans tailored to cancer type and treatment stage.</p>
+</div>
+
+<div className="card">
+<MdHealthAndSafety size={36}/>
+<h3>Managing Treatment Side Effects</h3>
+<p>Support for appetite loss, fatigue and digestive discomfort.</p>
+</div>
+
+<div className="card">
+<FaHandsHelping size={36}/>
+<h3>Continuous Nutrition Support</h3>
+<p>Compassionate guidance throughout the healing journey.</p>
+</div>
 
 </div>
 
@@ -110,37 +147,72 @@ healing journey.
 
 
 
-{/* MISSION AND VISION */}
+{/* TESTIMONIALS */}
 
 <section className="section">
 
-<h2>Our Mission & Vision</h2>
+<h2>Patient Experiences</h2>
 
-<div className="missionGrid">
+<div className="carousel">
 
-<div className="missionCard">
-<h3>Our Mission</h3>
+<div className="track">
+
+{testimonials.map((t,i)=>(
+<div className="testimonial" key={i}>
+
+<img src={t.image}/>
+
+<p>"{t.text}"</p>
+
+<strong>{t.name}</strong>
+<span>{t.city}</span>
+
+</div>
+))}
+
+{testimonials.map((t,i)=>(
+<div className="testimonial" key={"copy"+i}>
+
+<img src={t.image}/>
+
+<p>"{t.text}"</p>
+
+<strong>{t.name}</strong>
+<span>{t.city}</span>
+
+</div>
+))}
+
+</div>
+
+</div>
+
+</section>
+
+
+
+{/* SUPPORT */}
+
+<section className="support">
+
+<h2>
+<FaHeart className="heart"/>
+Support a Patient
+<FaHeart className="heart"/>
+</h2>
 
 <p>
-Our mission is to provide compassionate oncology nutrition guidance
-that supports patients during every stage of cancer treatment.
+Your support helps provide oncology nutrition guidance
+to patients who cannot access professional nutrition care.
 </p>
 
-</div>
+<button className="supportBtn">
+Support Now
+</button>
 
-<div className="missionCard">
-
-<h3>Our Vision</h3>
-
-<p>
-Our vision is to make oncology nutrition an essential part of cancer
-care so patients everywhere have access to nutritional support that
-strengthens their body and improves quality of life.
+<p className="counter">
+Patients Supported: 124
 </p>
-
-</div>
-
-</div>
 
 </section>
 
@@ -152,29 +224,70 @@ strengthens their body and improves quality of life.
 
 <img src="/lotus.png" className="lotus"/>
 
-<p>
-NutriWise – Supporting patients with compassionate oncology nutrition
-guidance
+<p className="tagline">
+NutriWise – Supporting patients with compassionate oncology nutrition guidance
 </p>
+
+<div className="policies">
+
+<a onClick={()=>setPolicy("privacy")}>Privacy Policy</a>
+<a onClick={()=>setPolicy("refund")}>Refund Policy</a>
+<a onClick={()=>setPolicy("legal")}>Legal Disclaimer</a>
+
+</div>
 
 </footer>
 
 
 
-{/* FLOATERS */}
+{/* POLICY MODAL */}
+
+{policy &&(
+
+<div className="modal">
+
+<div className="modalBox">
+
+<button onClick={()=>setPolicy("")}>Close</button>
+
+{policy==="privacy" &&(
+<p>
+NutriWise respects your privacy and collects only necessary
+information required to provide nutrition guidance.
+</p>
+)}
+
+{policy==="refund" &&(
+<p>
+Refund requests can be raised within 10 days of purchase.
+Refunds may not be granted if services have already been delivered.
+</p>
+)}
+
+{policy==="legal" &&(
+<p>
+NutriWise provides nutrition guidance for supportive care.
+This service does not replace medical advice from oncologists.
+</p>
+)}
+
+</div>
+
+</div>
+
+)}
+
+
+
+{/* FLOATING SOCIAL */}
 
 <div className="floater">
 
 <a href="https://wa.me/918320867088" target="_blank"><FaWhatsapp/></a>
-
 <a href="https://instagram.com/nutriwise_26" target="_blank"><FaInstagram/></a>
-
 <a href="https://linkedin.com/company/nutriwise26" target="_blank"><FaLinkedin/></a>
-
 <a href="https://youtube.com/@NutriWise_26" target="_blank"><FaYoutube/></a>
-
 <a href="https://x.com/NutriWise26" target="_blank"><FaXTwitter/></a>
-
 <a href="mailto:join.nutriwise@outlook.com"><MdEmail/></a>
 
 </div>
@@ -236,49 +349,90 @@ font-weight:500;
 .logoWrap{
 display:flex;
 justify-content:center;
-margin-top:5px;
-margin-bottom:25px;
-position:relative;
+margin-top:10px;
+margin-bottom:10px;
 }
 
 .logo{
-width:300px;
+width:280px;
 filter:drop-shadow(0 0 40px rgba(180,120,255,0.6));
 }
 
+.hero{
+text-align:center;
+max-width:850px;
+margin:30px auto;
+}
+
 .section{
-max-width:1000px;
+max-width:1100px;
 margin:80px auto;
-line-height:1.8;
 }
 
-.founder{
+.cards{
 display:grid;
-grid-template-columns:250px 1fr;
-gap:40px;
-align-items:center;
-}
-
-.founderImg{
-width:220px;
-height:220px;
-border-radius:50%;
-object-fit:cover;
-box-shadow:0 15px 35px rgba(0,0,0,0.15);
-}
-
-.missionGrid{
-display:grid;
-grid-template-columns:1fr 1fr;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
-margin-top:30px;
 }
 
-.missionCard{
+.card{
 background:white;
 padding:30px;
 border-radius:20px;
 box-shadow:0 15px 30px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+.carousel{
+overflow:hidden;
+}
+
+.track{
+display:flex;
+gap:30px;
+animation:scroll 28s linear infinite;
+}
+
+@keyframes scroll{
+0%{transform:translateX(0)}
+100%{transform:translateX(-50%)}
+}
+
+.testimonial{
+min-width:260px;
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.testimonial img{
+width:70px;
+height:70px;
+border-radius:50%;
+margin-bottom:10px;
+}
+
+.support{
+text-align:center;
+padding:70px 20px;
+}
+
+.heart{
+color:#7b3fff;
+margin:0 8px;
+}
+
+.supportBtn{
+margin-top:20px;
+padding:14px 36px;
+background:#6d39ff;
+color:white;
+border:none;
+border-radius:30px;
+font-size:16px;
+cursor:pointer;
 }
 
 .footer{
@@ -293,6 +447,32 @@ border-radius:25px;
 width:70px;
 margin-bottom:10px;
 filter:drop-shadow(0 0 25px rgba(180,120,255,0.6));
+}
+
+.policies{
+margin-top:15px;
+display:flex;
+justify-content:center;
+gap:20px;
+}
+
+.modal{
+position:fixed;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(0,0,0,0.6);
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.modalBox{
+background:white;
+padding:30px;
+border-radius:15px;
+max-width:500px;
 }
 
 .floater{

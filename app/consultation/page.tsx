@@ -1,50 +1,15 @@
 "use client"
 
-import { useState } from "react"
 import Link from "next/link"
 
 export default function Consultation(){
-
-const [form,setForm]=useState({
-name:"",
-age:"",
-gender:"",
-email:"",
-countryCode:"+91",
-phone:"",
-cancerType:"",
-doctor:"",
-hospital:"",
-date:"",
-time:""
-})
-
-function handleChange(e:any){
-setForm({
-...form,
-[e.target.name]:e.target.value
-})
-}
-
-function handleSubmit(e:any){
-e.preventDefault()
-
-if(form.phone.length < 8){
-alert("Please enter a valid phone number")
-return
-}
-
-alert("Consultation request submitted successfully")
-
-console.log(form)
-}
 
 return(
 
 <main className="page">
 
 
-{/* NAVBAR */}
+{/* NAVIGATION */}
 
 <nav className="nav">
 
@@ -71,16 +36,16 @@ return(
 
 
 
-{/* PAGE TITLE */}
+{/* HEADER */}
 
 <section className="header">
 
 <h1>Book a Consultation</h1>
 
 <p>
-Every cancer journey is deeply personal.
-Our oncology nutrition team is here to listen, guide and support you
-with compassion, care and understanding.
+If you or a loved one is going through cancer treatment,
+our team is here to support you with compassionate
+oncology nutrition guidance.
 </p>
 
 </section>
@@ -91,130 +56,60 @@ with compassion, care and understanding.
 
 <section className="formSection">
 
-<form onSubmit={handleSubmit} className="form">
+<form className="form">
 
 
-<input
-name="name"
-placeholder="Full Name"
-required
-onChange={handleChange}
-/>
+<input placeholder="Full Name" required />
 
 
-<input
-name="age"
-type="number"
-placeholder="Age"
-required
-onChange={handleChange}
-/>
+<div className="phoneRow">
 
-
-<select name="gender" required onChange={handleChange}>
-<option value="">Gender</option>
-<option>Male</option>
-<option>Female</option>
-<option>Prefer not to say</option>
+<select>
+<option>+91</option>
+<option>+1</option>
+<option>+44</option>
+<option>+61</option>
+<option>+971</option>
 </select>
 
-
-<input
-name="email"
-type="email"
-placeholder="Email Address"
-required
-onChange={handleChange}
-/>
-
-
-
-{/* PHONE */}
-
-<div className="phone">
-
-<select name="countryCode" onChange={handleChange}>
-<option value="+91">🇮🇳 +91</option>
-<option value="+1">🇺🇸 +1</option>
-<option value="+44">🇬🇧 +44</option>
-<option value="+61">🇦🇺 +61</option>
-</select>
-
-<input
-name="phone"
-placeholder="Phone Number"
-required
-onChange={handleChange}
-/>
+<input placeholder="Phone Number" type="tel" required />
 
 </div>
 
 
-
-<p className="note">
-
-We understand that reaching out during a health journey can take courage.
-Please know that you are not alone.  
-Our team is here to support you with kindness, patience and respect for
-your time and space.
-
-</p>
+<input placeholder="Email Address" type="email" required />
 
 
+<select>
 
-{/* CANCER TYPE */}
-
-<select name="cancerType" required onChange={handleChange}>
-
-<option value="">Select Cancer Type</option>
-
+<option>Select Cancer Type</option>
 <option>Breast Cancer</option>
 <option>Lung Cancer</option>
 <option>Colon Cancer</option>
-<option>Leukemia</option>
-<option>Lymphoma</option>
-<option>Prostate Cancer</option>
-<option>Ovarian Cancer</option>
-<option>Pancreatic Cancer</option>
+<option>Blood Cancer</option>
 <option>Other</option>
 
 </select>
 
 
-
-<input
-name="doctor"
-placeholder="Doctor Name (optional)"
-onChange={handleChange}
-/>
+<input placeholder="Cancer Stage (if known)" />
 
 
-
-<input
-name="hospital"
-placeholder="Hospital Name (optional)"
-onChange={handleChange}
-/>
+<input placeholder="Doctor Name" />
 
 
-
-{/* DATE */}
-
-<input
-type="date"
-name="date"
-required
-onChange={handleChange}
-/>
+<input placeholder="Hospital Name" />
 
 
+<input placeholder="City" />
 
-{/* TIME */}
 
-<select name="time" required onChange={handleChange}>
+<input type="date" />
 
-<option value="">Select Time Slot</option>
 
+<select>
+
+<option>Select Time Slot</option>
 <option>09:00 AM</option>
 <option>09:30 AM</option>
 <option>10:00 AM</option>
@@ -245,13 +140,35 @@ onChange={handleChange}
 
 
 
-<button type="submit">
-Submit Consultation Request
-</button>
+<button className="bookBtn">Request Consultation</button>
+
+
+<p className="note">
+
+We understand that this journey can feel overwhelming.
+Our team respects your time and space, and we promise
+we will never spam you with calls.
+
+</p>
 
 </form>
 
 </section>
+
+
+
+{/* FOOTER */}
+
+<footer className="footer">
+
+<img src="/lotus.png" className="lotus"/>
+
+<p>
+NutriWise is committed to supporting cancer patients
+through compassionate oncology nutrition care.
+</p>
+
+</footer>
 
 
 
@@ -295,83 +212,139 @@ padding:40px;
 
 background:linear-gradient(
 180deg,
-#fff7fb 0%,
-#f3ecff 35%,
-#efe8ff 65%,
-#fdf4ff 100%
+#fff7fb,
+#f3ecff,
+#efe8ff,
+#fdf4ff
 );
 
 color:#4a3ca6;
 }
 
+
+
 .nav{
 display:flex;
 justify-content:space-between;
-margin-bottom:20px;
 }
 
 .links{
 display:flex;
-gap:28px;
-font-weight:500;
+gap:25px;
+flex-wrap:wrap;
 }
+
+
 
 .logoWrap{
 display:flex;
 justify-content:center;
-margin-bottom:30px;
+margin:40px 0;
 }
 
 .logo{
-width:280px;
-filter:drop-shadow(0 0 25px rgba(180,120,255,0.5));
+width:260px;
 }
+
+
 
 .header{
 text-align:center;
 max-width:700px;
 margin:auto;
-margin-bottom:40px;
+margin-bottom:50px;
 }
+
+
 
 .formSection{
-max-width:600px;
-margin:auto;
+display:flex;
+justify-content:center;
 }
+
+
 
 .form{
+background:white;
+padding:40px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+max-width:500px;
+width:100%;
+
 display:flex;
 flex-direction:column;
-gap:16px;
+gap:15px;
 }
 
-input,select{
+
+
+input, select{
 padding:12px;
-border-radius:10px;
+border-radius:8px;
 border:1px solid #ddd;
 font-size:14px;
 }
 
-.phone{
+
+
+.phoneRow{
 display:flex;
 gap:10px;
 }
 
-button{
-background:#6d4df5;
+
+
+.phoneRow select{
+width:30%;
+}
+
+.phoneRow input{
+width:70%;
+}
+
+
+
+.bookBtn{
+margin-top:10px;
+background:#5e3ed6;
 color:white;
 padding:14px;
 border:none;
-border-radius:20px;
+border-radius:10px;
+font-weight:600;
 cursor:pointer;
-font-weight:500;
-margin-top:10px;
 }
+
+
 
 .note{
 font-size:13px;
-color:#6b6b6b;
+text-align:center;
+margin-top:10px;
+opacity:0.8;
 }
+
+
+
+.footer{
+margin-top:80px;
+text-align:center;
+padding:40px;
+
+background:linear-gradient(
+180deg,
+#f3ecff,
+#efe8ff
+);
+}
+
+.lotus{
+width:70px;
+margin-bottom:10px;
+}
+
+
 
 .floaters{
 position:fixed;
@@ -396,6 +369,27 @@ justify-content:center;
 width:22px;
 height:22px;
 filter:brightness(0) invert(1);
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.page{
+padding:20px;
+}
+
+.phoneRow{
+flex-direction:column;
+}
+
+.phoneRow select,
+.phoneRow input{
+width:100%;
+}
+
 }
 
 `}</style>

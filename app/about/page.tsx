@@ -3,7 +3,8 @@
 import Link from "next/link"
 
 export default function About() {
-return(
+
+return (
 
 <main className="page">
 
@@ -15,14 +16,12 @@ return(
 <div></div>
 
 <div className="links">
-
 <Link href="/">Home</Link>
 <Link href="/about">About Us</Link>
 <Link href="/nutritionists">Our Nutritionists</Link>
 <Link href="/stories">Stories of Strength</Link>
 <Link href="/consultation">Book Consultation</Link>
 <Link href="/login">Login</Link>
-
 </div>
 
 </nav>
@@ -48,26 +47,26 @@ NutriWise began with a simple but powerful realization — while medicine fights
 </p>
 
 <p>
-During cancer treatment, patients often struggle with fatigue, appetite loss, nausea, digestive discomfort, and emotional exhaustion. Families desperately try to help but often feel lost when it comes to nutrition — unsure what helps and what harms.
+During cancer treatment, patients often face fatigue, appetite loss, nausea, digestive discomfort and emotional exhaustion. Families try their best to help, yet many feel uncertain about what nutrition truly supports healing.
 </p>
 
 <p>
-Many patients are told what treatments to take, but very few receive clear guidance on how to nourish their bodies during those treatments. Yet nutrition can play a vital role in maintaining strength, supporting immunity, and improving tolerance to therapy.
+Despite the importance of nutrition during treatment, patients rarely receive clear guidance tailored to their journey. What should they eat? What helps manage treatment side effects? How can nutrition help maintain strength?
 </p>
 
 <p>
-NutriWise was created to bridge this gap — to provide compassionate, evidence-based oncology nutrition guidance so that patients and their families never feel alone or confused during their journey.
+NutriWise was created to bridge this gap — to provide compassionate and evidence-based oncology nutrition guidance so patients and families never feel alone or confused during their journey.
 </p>
 
 <p>
-At NutriWise, our goal is not just nutrition advice. Our goal is strength, dignity, and hope for every patient navigating cancer.
+At NutriWise, our goal is not just nutritional advice. Our goal is strength, resilience, dignity and hope for every patient navigating cancer.
 </p>
 
 </section>
 
 
 
-{/* FOUNDER MESSAGE */}
+{/* FOUNDER */}
 
 <section className="founder">
 
@@ -80,23 +79,23 @@ At NutriWise, our goal is not just nutrition advice. Our goal is strength, digni
 <div className="founderText">
 
 <p>
-When I started NutriWise, it came from a deep realization that cancer care is not only about medicine — it is about supporting the entire human being going through the journey.
+When I started NutriWise, it came from a deep realization that cancer care is not only about medical treatment — it is about supporting the entire person going through the journey.
 </p>
 
 <p>
-Patients undergoing treatment often experience physical weakness, emotional uncertainty, and overwhelming confusion about nutrition. Families try their best to help, but reliable guidance is often missing.
+Patients often experience weakness, emotional stress and confusion around nutrition during treatment. Families want to help but frequently lack reliable guidance.
 </p>
 
 <p>
-NutriWise was created with a heartfelt mission — to ensure that no patient feels lost when it comes to nutrition during treatment.
+NutriWise was created with one heartfelt mission — to ensure that no patient feels lost when it comes to nutrition during cancer treatment.
 </p>
 
 <p>
-Nutrition has the power to restore strength, support healing, and bring comfort during difficult days. Through NutriWise, we aim to bring compassionate, science-based nutrition support to every patient and family who needs it.
+Nutrition can restore strength, support healing and provide comfort during some of the most difficult days. Through NutriWise, we aim to bring compassionate, science-based nutrition support to every patient and family who needs it.
 </p>
 
 <p>
-Every patient deserves not just treatment, but strength, clarity, and hope throughout their journey.
+Every patient deserves not just treatment, but strength, clarity and hope throughout their journey.
 </p>
 
 <p className="founderName">
@@ -112,27 +111,27 @@ Founder, NutriWise
 
 
 
-{/* MISSION & VISION */}
+{/* MISSION + VISION */}
 
 <section className="missionVision">
 
-<div className="box">
+<div className="card">
 
 <h2>Our Mission</h2>
 
 <p>
-To provide compassionate oncology nutrition guidance that empowers patients and families to navigate cancer treatment with strength, clarity, and dignity.
+To provide compassionate oncology nutrition guidance that empowers patients and families to navigate cancer treatment with strength, clarity and dignity.
 </p>
 
 </div>
 
 
-<div className="box">
+<div className="card">
 
 <h2>Our Vision</h2>
 
 <p>
-To build a world where every cancer patient has access to trusted nutrition guidance that supports treatment, improves quality of life, and strengthens recovery.
+To build a world where every cancer patient has access to trusted nutrition guidance that supports treatment, improves quality of life and strengthens recovery.
 </p>
 
 </div>
@@ -155,16 +154,33 @@ NutriWise – Supporting patients with compassionate oncology nutrition guidance
 
 
 
-{/* FLOATERS */}
+{/* SOCIAL FLOATERS */}
 
 <div className="floaters">
 
-<a href="https://wa.me/" target="_blank">W</a>
-<a href="https://instagram.com" target="_blank">I</a>
-<a href="https://linkedin.com" target="_blank">L</a>
-<a href="https://youtube.com" target="_blank">Y</a>
-<a href="https://x.com" target="_blank">X</a>
-<a href="mailto:join.nutriwise@outlook.com">M</a>
+<a href="https://wa.me/" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"/>
+</a>
+
+<a href="https://instagram.com" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733558.png"/>
+</a>
+
+<a href="https://linkedin.com" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733561.png"/>
+</a>
+
+<a href="https://youtube.com" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733646.png"/>
+</a>
+
+<a href="https://x.com" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png"/>
+</a>
+
+<a href="mailto:join.nutriwise@outlook.com">
+<img src="https://cdn-icons-png.flaticon.com/512/732/732200.png"/>
+</a>
 
 </div>
 
@@ -192,7 +208,7 @@ color:#4a3ca6;
 
 
 
-/* NAV */
+/* NAVBAR */
 
 .nav{
 display:flex;
@@ -237,7 +253,7 @@ margin-bottom:30px;
 }
 
 .story p{
-margin-bottom:20px;
+margin-bottom:18px;
 }
 
 
@@ -269,7 +285,7 @@ box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
 .founderText p{
-margin-bottom:18px;
+margin-bottom:16px;
 line-height:1.8;
 }
 
@@ -289,7 +305,7 @@ max-width:900px;
 margin:100px auto;
 }
 
-.box{
+.card{
 flex:1;
 background:white;
 padding:30px;
@@ -320,29 +336,30 @@ margin-bottom:10px;
 /* FLOATERS */
 
 .floaters{
-
 position:fixed;
 right:20px;
 top:40%;
 display:flex;
 flex-direction:column;
-gap:14px;
-
+gap:16px;
+z-index:1000;
 }
 
 .floaters a{
-
 background:#5e3ed6;
-color:white;
-width:42px;
-height:42px;
+width:46px;
+height:46px;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-text-decoration:none;
-font-weight:bold;
+box-shadow:0 6px 18px rgba(0,0,0,0.15);
+}
 
+.floaters img{
+width:22px;
+height:22px;
+filter:brightness(0) invert(1);
 }
 
 
@@ -351,4 +368,5 @@ font-weight:bold;
 </main>
 
 )
+
 }

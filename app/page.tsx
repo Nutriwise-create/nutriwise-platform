@@ -1,165 +1,239 @@
-'use client'
+"use client"
 
 import Image from "next/image"
-import { useEffect, useState } from "react"
+import { FaWhatsapp, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6"
+import { MdEmail } from "react-icons/md"
 
 export default function Home() {
 
-const [patients,setPatients] = useState(0)
+const testimonials = [
+{ name:"Priya Mehta", city:"Mumbai", text:"During chemotherapy I had lost my appetite completely. The nutritional guidance helped me regain strength gradually.", img:"https://randomuser.me/api/portraits/women/11.jpg"},
+{ name:"Ramesh Shah", city:"Ahmedabad", text:"Nutrition support helped me maintain my weight and energy during treatment.", img:"https://randomuser.me/api/portraits/men/32.jpg"},
+{ name:"Anita Patel", city:"Surat", text:"Food finally became manageable again. The support felt truly compassionate.", img:"https://randomuser.me/api/portraits/women/65.jpg"},
+{ name:"Kunal Verma", city:"Delhi", text:"I finally understood what my body needed during therapy.", img:"https://randomuser.me/api/portraits/men/71.jpg"},
+{ name:"Meena Iyer", city:"Chennai", text:"The guidance was simple yet powerful during difficult days.", img:"https://randomuser.me/api/portraits/women/44.jpg"},
+{ name:"Arjun Nair", city:"Bangalore", text:"It helped me regain strength slowly during recovery.", img:"https://randomuser.me/api/portraits/men/22.jpg"},
+]
 
-useEffect(()=>{
-let target = 124
-let interval = setInterval(()=>{
-setPatients(prev=>{
-if(prev>=target){
-clearInterval(interval)
-return target
-}
-return prev+1
-})
-},20)
+return (
 
-return ()=>clearInterval(interval)
-},[])
-
-return(
-
-<div className="min-h-screen bg-gradient-to-br from-purple-700 via-purple-500 to-pink-500 text-white font-light">
+<div className="min-h-screen text-gray-800 bg-gradient-to-br from-purple-50 via-pink-50 to-purple-100">
 
 {/* NAVBAR */}
 
-<div className="flex justify-between items-center px-10 py-6">
+<header className="flex justify-end px-10 py-6 text-sm font-medium space-x-6">
+
+<a href="#">About Us</a>
+<a href="#">Our Nutritionists</a>
+<a href="#">Stories of Strength</a>
+<a href="#">Book Consultation</a>
+<a href="#">Login</a>
+
+</header>
+
+
+{/* LOGO SECTION WITH GLOW */}
+
+<div className="flex justify-center items-center py-12 relative">
+
+<div className="absolute w-[320px] h-[320px] bg-purple-400 rounded-full blur-[120px] opacity-30"></div>
+<div className="absolute w-[300px] h-[300px] bg-pink-400 rounded-full blur-[120px] opacity-30"></div>
 
 <Image
 src="/logo.png"
 alt="NutriWise"
-width={140}
-height={60}
+width={260}
+height={100}
+className="relative z-10"
 />
 
-<div className="flex gap-8 text-sm">
-
-<a href="/about">About</a>
-<a href="/nutritionists">Our Nutritionists</a>
-<a href="/stories">Stories of Strength</a>
-<a href="/consultation">Book Consultation</a>
-<a href="/login">Login</a>
-
 </div>
 
-</div>
 
 {/* HERO */}
 
-<section className="text-center py-24 px-6">
+<section className="text-center px-6 pb-20">
 
-<div className="flex justify-center mb-6">
+<h1 className="text-4xl md:text-5xl font-serif text-purple-900 max-w-3xl mx-auto leading-tight">
 
-<Image
-src="/logo.png"
-alt="NutriWise"
-width={200}
-height={120}
-/>
-
-</div>
-
-<h1 className="text-4xl md:text-5xl font-serif max-w-3xl mx-auto leading-snug">
-
-Medicine treats cancer,  
-but nutrition strengthens your body.
+Medicine treats cancer, but nutrition strengthens your body
 
 </h1>
 
+<p className="mt-6 text-lg max-w-xl mx-auto text-gray-700">
+
+Compassionate oncology nutrition guidance designed to support strength,
+healing, and dignity throughout the cancer journey.
+
+</p>
+
 </section>
+
 
 {/* WHY NUTRITION MATTERS */}
 
-<section className="bg-white text-gray-800 rounded-t-3xl px-10 py-20">
+<section className="py-20 px-6 max-w-4xl mx-auto">
 
-<h2 className="text-3xl text-center font-serif mb-10">
+<h2 className="text-3xl font-serif text-center text-purple-900 mb-10">
+
 Why Right Nutrition Matters
+
 </h2>
 
-<div className="max-w-3xl mx-auto text-center leading-relaxed">
+<div className="bg-white shadow-xl rounded-2xl p-10 leading-relaxed text-gray-700">
 
-<p>
-Cancer treatment places immense stress on the body. Many patients experience fatigue, appetite loss, weight changes, and difficulty maintaining strength during therapy.
-</p>
+Cancer treatment places enormous stress on the body. Chemotherapy,
+radiation therapy, surgery, and targeted treatments often bring
+challenging side effects such as fatigue, nausea, appetite loss,
+digestive discomfort, and muscle weakness.
 
-<br/>
+During treatment the body requires the right nourishment not only to
+maintain strength but also to recover from therapy.
 
-<p>
-The right nutritional support helps patients maintain energy, protect muscle mass, strengthen immunity, and tolerate treatments better.
-</p>
+Balanced oncology nutrition helps support immune function, preserve
+muscle mass, improve treatment tolerance, and enhance overall wellbeing
+throughout therapy.
 
-<br/>
-
-<p>
-NutriWise was created to ensure that no patient walks through treatment without the guidance, compassion, and nutritional care they deserve.
-</p>
+At NutriWise our goal is to support patients and families with
+compassionate, evidence-informed nutritional guidance so that strength,
+healing, and resilience remain possible even during difficult phases
+of treatment.
 
 </div>
 
 </section>
 
+
 {/* WHAT WE PROVIDE */}
 
-<section className="bg-white text-gray-800 px-10 py-20">
+<section className="py-20 bg-white">
 
-<h2 className="text-3xl font-serif text-center mb-12">
+<h2 className="text-3xl font-serif text-center text-purple-900 mb-16">
+
 What We Provide
+
 </h2>
 
-<div className="grid md:grid-cols-3 gap-10">
+<div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto px-6">
 
-{[
-{
-title:"Personalised Oncology Nutrition",
-text:"Nutrition plans designed according to cancer type, stage, and treatment."
-},
+<div className="p-8 rounded-xl shadow hover:shadow-2xl transition bg-gradient-to-br from-purple-50 to-pink-50">
 
-{
-title:"Managing Treatment Side Effects",
-text:"Support for nausea, appetite loss, fatigue, and treatment related symptoms."
-},
+<h3 className="text-xl font-semibold text-purple-800 mb-4">
 
-{
-title:"Continuous Nutrition Monitoring",
-text:"Guidance throughout the treatment journey to maintain strength."
-}
+Personalized Oncology Nutrition
 
-].map((card,i)=>(
-
-<div key={i} className="bg-white shadow-xl rounded-xl p-8 hover:scale-105 transition">
-
-<h3 className="font-semibold text-purple-700 mb-3">
-{card.title}
 </h3>
 
-<p className="text-sm text-gray-600">
-{card.text}
+<p>
+
+Nutrition plans designed according to cancer type, treatment stage,
+symptoms, and individual health needs.
+
 </p>
 
 </div>
 
+
+<div className="p-8 rounded-xl shadow hover:shadow-2xl transition bg-gradient-to-br from-purple-50 to-pink-50">
+
+<h3 className="text-xl font-semibold text-purple-800 mb-4">
+
+Managing Treatment Side Effects
+
+</h3>
+
+<p>
+
+Guidance to support appetite, digestion, fatigue management,
+and maintaining strength during treatment.
+
+</p>
+
+</div>
+
+
+<div className="p-8 rounded-xl shadow hover:shadow-2xl transition bg-gradient-to-br from-purple-50 to-pink-50">
+
+<h3 className="text-xl font-semibold text-purple-800 mb-4">
+
+Continuous Nutrition Support
+
+</h3>
+
+<p>
+
+Ongoing compassionate guidance helping patients and families
+navigate nutrition with clarity and confidence.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+{/* TESTIMONIALS */}
+
+<section className="py-20">
+
+<h2 className="text-3xl font-serif text-center text-purple-900 mb-16">
+
+Patient Experiences
+
+</h2>
+
+<div className="flex overflow-x-auto space-x-8 px-10">
+
+{testimonials.map((t,i)=>(
+<div key={i} className="min-w-[260px] bg-white shadow-lg rounded-xl p-6">
+
+<Image
+src={t.img}
+alt={t.name}
+width={60}
+height={60}
+className="rounded-full"
+/>
+
+<p className="mt-4 text-sm text-gray-700">
+
+"{t.text}"
+
+</p>
+
+<p className="mt-3 font-medium text-sm">
+
+{t.name} – {t.city}
+
+</p>
+
+</div>
 ))}
 
 </div>
 
 </section>
 
+
 {/* SUPPORT A PATIENT */}
 
-<section className="bg-purple-700 text-center py-20 px-8">
+<section className="py-24 text-center bg-gradient-to-r from-purple-600 to-pink-500 text-white">
 
 <h2 className="text-3xl font-serif mb-6">
+
 Support a Patient
+
 </h2>
 
-<p className="max-w-xl mx-auto mb-8">
+<p className="max-w-xl mx-auto mb-10">
 
-Many patients cannot access nutritional guidance during treatment due to financial constraints. Supporting a patient means helping someone maintain strength, dignity, and hope during one of the most difficult journeys of their life.
+Cancer treatment can be physically and emotionally exhausting.
+Through the Support a Patient initiative, individuals and
+organizations can help provide oncology nutrition guidance to
+patients who may otherwise struggle to access this support.
 
 </p>
 
@@ -169,156 +243,81 @@ Support Now
 
 </button>
 
-</section>
+<div className="mt-8 text-xl">
 
-{/* PATIENT COUNTER */}
-
-<section className="bg-white text-center text-gray-800 py-20">
-
-<h2 className="text-3xl font-serif mb-6">
-Patients Supported Till Now
-</h2>
-
-<p className="text-5xl font-bold text-purple-600">
-
-{patients}
-
-</p>
-
-</section>
-
-{/* TESTIMONIALS */}
-
-<section className="bg-white px-10 py-20">
-
-<h2 className="text-3xl font-serif text-center mb-12 text-gray-800">
-Patient Experiences
-</h2>
-
-<div className="grid md:grid-cols-3 gap-8">
-
-{[
-"Kavita Sharma","Rahul Mehta","Anita Kapoor","Vijay Patel",
-"Sunita Iyer","Arjun Singh","Pooja Khanna","Neha Desai",
-"Manish Shah","Deepa Rao","Rajesh Nair","Ritu Bansal"
-
-].map((name,i)=>(
-
-<div key={i} className="bg-gray-50 p-6 rounded-xl shadow text-center">
-
-<div className="w-16 h-16 bg-purple-400 rounded-full mx-auto mb-4"></div>
-
-<p className="text-sm text-gray-600 mb-3">
-
-Nutrition guidance helped me maintain strength during treatment and feel more supported.
-
-</p>
-
-<p className="font-semibold text-purple-700">
-
-{name}
-
-</p>
-
-</div>
-
-))}
+Patients Supported: <strong>124</strong>
 
 </div>
 
 </section>
 
-{/* STORIES */}
-
-<section className="bg-purple-600 text-white text-center px-10 py-20">
-
-<h2 className="text-3xl font-serif mb-6">
-Stories of Strength
-</h2>
-
-<p className="max-w-xl mx-auto">
-
-Stories of resilience from individuals such as Hina Khan, Sonali Bendre, and Anurag Basu remind us that courage and hope can guide people through the most difficult journeys.
-
-</p>
-
-</section>
-
-{/* NUTRITIONISTS */}
-
-<section className="bg-white px-10 py-20">
-
-<h2 className="text-3xl font-serif text-center mb-12 text-gray-800">
-
-Our Nutritionists
-
-</h2>
-
-<div className="grid md:grid-cols-5 gap-6">
-
-{["Dr Riya Sharma","Arjun Mehta","Dr Naina Kapoor","Dr Aman Verma","Sonal Gupta"].map((name,i)=>(
-
-<div key={i} className="text-center">
-
-<div className="w-20 h-20 rounded-full bg-purple-400 mx-auto mb-3"></div>
-
-<p className="font-semibold text-purple-700">
-
-{name}
-
-</p>
-
-</div>
-
-))}
-
-</div>
-
-</section>
 
 {/* SOCIAL MEDIA */}
 
-<section className="bg-purple-700 text-center py-12">
+<section className="py-16 text-center">
 
-<div className="flex justify-center gap-10 text-sm">
+<h2 className="text-2xl font-serif text-purple-900 mb-8">
 
-<a href="https://wa.me/918320867088">WhatsApp</a>
-<a href="https://instagram.com/nutriwise_26">Instagram</a>
-<a href="https://x.com/NutriWise26">X</a>
-<a href="https://www.linkedin.com/company/nutriwise26">LinkedIn</a>
-<a href="https://www.youtube.com/@NutriWise_26">YouTube</a>
+You Can Find Us At
+
+</h2>
+
+<div className="flex justify-center space-x-6 text-2xl text-purple-700">
+
+<a href="https://wa.me/918320867088"><FaWhatsapp/></a>
+<a href="https://instagram.com/nutriwise_26"><FaInstagram/></a>
+<a href="https://x.com/NutriWise26"><FaXTwitter/></a>
+<a href="https://www.linkedin.com/company/nutriwise26"><FaLinkedin/></a>
+<a href="https://www.youtube.com/@NutriWise_26"><FaYoutube/></a>
+<a href="mailto:join.nutriwise@outlook.com"><MdEmail/></a>
 
 </div>
 
 </section>
 
+
 {/* FOOTER */}
 
-<footer className="bg-black text-white text-center py-6 text-sm">
+<footer className="py-10 text-center text-gray-500 text-sm">
 
-<p className="mb-2">
-Privacy Policy • Refund Policy • Legal Disclaimer
-</p>
+<div className="mb-4 space-x-4">
 
-<p>
-© NutriWise
+<a href="#">Privacy Policy</a>
+<a href="#">Refund Policy</a>
+<a href="#">Legal Disclaimer</a>
+
+</div>
+
+<Image
+src="/lotus.png"
+alt="Lotus"
+width={60}
+height={60}
+className="mx-auto"
+/>
+
+<p className="mt-4">
+
+NutriWise – Supporting patients with compassionate oncology nutrition guidance.
+
 </p>
 
 </footer>
+
 
 {/* FLOATING WHATSAPP */}
 
 <a
 href="https://wa.me/918320867088"
-className="fixed bottom-6 right-6 bg-green-500 px-4 py-3 rounded-full shadow-lg"
+className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg"
 >
 
-WhatsApp
+<FaWhatsapp/>
 
 </a>
+
 
 </div>
 
 )
-
 }

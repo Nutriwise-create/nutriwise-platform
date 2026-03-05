@@ -1,15 +1,15 @@
 "use client"
 
 import Link from "next/link"
-import { FaLeaf, FaHandsHelping, FaHeart } from "react-icons/fa"
-import { MdHealthAndSafety } from "react-icons/md"
+import { useState } from "react"
 
-export default function Home() {
+export default function Home(){
 
-return (
+const [policy,setPolicy]=useState("")
+
+return(
 
 <main className="page">
-
 
 {/* NAVBAR */}
 
@@ -17,14 +17,13 @@ return (
 
 <div></div>
 
-<div className="navLinks">
-
+<div className="links">
+<Link href="/">Home</Link>
 <Link href="/about">About Us</Link>
 <Link href="/nutritionists">Our Nutritionists</Link>
 <Link href="/stories">Stories of Strength</Link>
 <Link href="/consultation">Book Consultation</Link>
 <Link href="/login">Login</Link>
-
 </div>
 
 </nav>
@@ -34,7 +33,7 @@ return (
 {/* LOGO */}
 
 <div className="logoWrap">
-<img src="/Logo.png" alt="NutriWise" className="logo"/>
+<img src="/Logo.png" className="logo"/>
 </div>
 
 
@@ -43,13 +42,11 @@ return (
 
 <section className="hero">
 
-<h1>
-Medicine treats cancer, but nutrition strengthens your body
-</h1>
+<h1>Medicine treats cancer, but nutrition strengthens your body.</h1>
 
 <p>
 Compassionate oncology nutrition guidance designed to support
-strength, healing and dignity throughout the cancer journey.
+patients during treatment, recovery and healing.
 </p>
 
 </section>
@@ -58,49 +55,65 @@ strength, healing and dignity throughout the cancer journey.
 
 {/* WHY NUTRITION */}
 
-<section className="section">
+<section className="nutrition">
 
 <h2>Why Right Nutrition Matters</h2>
 
 <p>
-Cancer treatment places enormous stress on the body. Chemotherapy,
-radiation therapy and surgery can cause fatigue, appetite loss and
-digestive discomfort.
+Cancer treatment places enormous stress on the body.
+Chemotherapy, radiation therapy and surgeries often affect appetite,
+digestion, immunity and overall strength.
 </p>
 
 <p>
-Balanced oncology nutrition helps maintain strength, support immunity
-and improve recovery during treatment.
+Without structured nutritional support, patients may experience
+fatigue, weight loss, muscle weakness and slower recovery.
+Evidence-based oncology nutrition helps maintain energy levels,
+supports immunity and improves tolerance to treatment.
+</p>
+
+<p>
+Nutrition does not replace medical treatment.
+It strengthens the body so treatment can work more effectively.
 </p>
 
 </section>
 
 
 
-{/* SERVICES */}
+{/* WHAT WE PROVIDE */}
 
-<section className="section">
+<section className="services">
 
 <h2>What We Provide</h2>
 
-<div className="cards">
+<div className="serviceGrid">
 
-<div className="card">
-<FaLeaf size={36}/>
-<h3>Personalized Oncology Nutrition</h3>
-<p>Nutrition plans tailored to cancer type and treatment stage.</p>
+<div className="service">
+<div className="icon">🥗</div>
+<h3>Personalized Nutrition Plans</h3>
+<p>
+Tailored nutrition strategies designed around the patient's
+treatment stage and nutritional needs.
+</p>
 </div>
 
-<div className="card">
-<MdHealthAndSafety size={36}/>
-<h3>Managing Treatment Side Effects</h3>
-<p>Support for appetite loss, fatigue and digestive discomfort.</p>
+<div className="service">
+<div className="icon">📊</div>
+<h3>Side-Effect Nutrition Support</h3>
+<p>
+Guidance to help manage fatigue, nausea,
+loss of appetite and treatment related symptoms.
+</p>
 </div>
 
-<div className="card">
-<FaHandsHelping size={36}/>
-<h3>Continuous Nutrition Support</h3>
-<p>Compassionate guidance throughout the healing journey.</p>
+<div className="service">
+<div className="icon">🤝</div>
+<h3>Continuous Nutritional Guidance</h3>
+<p>
+Ongoing support to adjust nutrition plans during treatment
+and recovery.
+</p>
 </div>
 
 </div>
@@ -109,24 +122,79 @@ and improve recovery during treatment.
 
 
 
-{/* SUPPORT */}
+{/* TESTIMONIALS */}
+
+<section className="testimonials">
+
+<h2>Patient Experiences</h2>
+
+<div className="scroll">
+
+<div className="card">
+<img src="https://randomuser.me/api/portraits/women/65.jpg"/>
+<h4>Kavita Sharma</h4>
+<p>Mumbai</p>
+<p>
+The nutrition guidance helped me regain strength
+during chemotherapy.
+</p>
+</div>
+
+<div className="card">
+<img src="https://randomuser.me/api/portraits/men/45.jpg"/>
+<h4>Anil Patel</h4>
+<p>Ahmedabad</p>
+<p>
+Small nutritional changes made treatment
+much easier to handle.
+</p>
+</div>
+
+<div className="card">
+<img src="https://randomuser.me/api/portraits/women/50.jpg"/>
+<h4>Sneha Joshi</h4>
+<p>Bangalore</p>
+<p>
+I felt supported and guided throughout
+my recovery journey.
+</p>
+</div>
+
+<div className="card">
+<img src="https://randomuser.me/api/portraits/men/40.jpg"/>
+<h4>Rahul Shah</h4>
+<p>Delhi</p>
+<p>
+The diet guidance helped me maintain
+energy levels during treatment.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+{/* SUPPORT PATIENT */}
 
 <section className="support">
 
-<h2>
-<FaHeart className="heart"/>
-Support a Patient
-<FaHeart className="heart"/>
-</h2>
+<h2>❤️ Support a Patient</h2>
 
 <p>
-Your support helps provide oncology nutrition guidance
-to patients who cannot access professional nutrition care.
+Many patients undergoing cancer treatment struggle
+to access structured nutritional guidance.
+Your support can help someone receive the care and
+guidance they deserve during a difficult journey.
 </p>
 
-<button className="supportBtn">
-Support Now
-</button>
+<button className="supportBtn">Support Now</button>
+
+<div className="counter">
+<h3>10+</h3>
+<p>Patients Supported Till Now</p>
+</div>
 
 </section>
 
@@ -138,17 +206,98 @@ Support Now
 
 <img src="/lotus.png" className="lotus"/>
 
-<p>
-NutriWise – Supporting patients with compassionate oncology nutrition guidance
-</p>
-
 <div className="policies">
-<a>Privacy Policy</a>
-<a>Refund Policy</a>
-<a>Legal Disclaimer</a>
+
+<button onClick={()=>setPolicy("privacy")}>Privacy Policy</button>
+<button onClick={()=>setPolicy("refund")}>Refund Policy</button>
+<button onClick={()=>setPolicy("legal")}>Legal Disclaimer</button>
+
 </div>
 
+<p>
+NutriWise is committed to supporting cancer patients
+through compassionate oncology nutrition guidance.
+</p>
+
 </footer>
+
+
+
+{/* POLICY POPUP */}
+
+{policy && (
+
+<div className="popup">
+
+<div className="popupBox">
+
+<button className="close" onClick={()=>setPolicy("")}>✕</button>
+
+{policy==="privacy" && (
+<p>
+We respect your privacy and protect all personal
+information shared with NutriWise.
+Your data is used only to provide consultation
+and support services.
+</p>
+)}
+
+{policy==="refund" && (
+<p>
+Refund requests raised within 10 days of payment
+are eligible for a full refund provided the
+consultation services have not been fully used.
+NutriWise reserves the right to review refund
+requests to prevent misuse.
+</p>
+)}
+
+{policy==="legal" && (
+<p>
+NutriWise provides nutrition guidance for
+supportive care during cancer treatment.
+Our services do not replace medical advice
+from oncologists or healthcare providers.
+</p>
+)}
+
+</div>
+
+</div>
+
+)}
+
+
+
+{/* FLOATERS */}
+
+<div className="floaters">
+
+<a href="https://wa.me/918320867088" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"/>
+</a>
+
+<a href="https://instagram.com/nutriwise_26" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733558.png"/>
+</a>
+
+<a href="https://linkedin.com" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733561.png"/>
+</a>
+
+<a href="https://youtube.com" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733646.png"/>
+</a>
+
+<a href="https://x.com" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png"/>
+</a>
+
+<a href="mailto:join.nutriwise@outlook.com" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/732/732200.png"/>
+</a>
+
+</div>
 
 
 
@@ -156,84 +305,132 @@ NutriWise – Supporting patients with compassionate oncology nutrition guidance
 
 .page{
 font-family:Poppins;
-padding:30px;
-background:linear-gradient(180deg,#fff7fb,#f2ecff,#fdf4ff);
-color:#5b3dbf;
+padding:40px;
+
+background:linear-gradient(
+180deg,
+#fff7fb,
+#f3ecff,
+#efe8ff,
+#fdf4ff
+);
+
+color:#4a3ca6;
 }
 
 .nav{
 display:flex;
 justify-content:space-between;
-margin-bottom:20px;
 }
 
-.navLinks{
+.links{
 display:flex;
-gap:28px;
-font-weight:500;
+gap:25px;
+flex-wrap:wrap;
 }
 
 .logoWrap{
 display:flex;
 justify-content:center;
-margin:10px 0;
+margin:40px 0;
 }
 
 .logo{
 width:280px;
+filter:drop-shadow(0 0 30px rgba(200,150,255,0.6));
 }
 
 .hero{
 text-align:center;
+max-width:700px;
+margin:auto;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.nutrition{
 max-width:800px;
-margin:40px auto;
-}
-
-.section{
-max-width:1000px;
 margin:80px auto;
+line-height:1.8;
 }
 
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
-
-.card{
-background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-text-align:center;
-}
-
-.support{
+.services{
 text-align:center;
 margin:80px 0;
 }
 
-.heart{
-color:#7b3fff;
-margin:0 8px;
+.serviceGrid{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.service{
+background:white;
+padding:25px;
+border-radius:15px;
+width:260px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+.icon{
+font-size:30px;
+margin-bottom:10px;
+}
+
+.testimonials{
+margin:80px 0;
+text-align:center;
+}
+
+.scroll{
+display:flex;
+gap:20px;
+overflow:auto;
+padding:20px;
+}
+
+.card{
+min-width:240px;
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+.card img{
+width:60px;
+height:60px;
+border-radius:50%;
+}
+
+.support{
+text-align:center;
+margin:80px auto;
+max-width:700px;
 }
 
 .supportBtn{
-margin-top:20px;
-padding:14px 36px;
-background:#6d39ff;
+background:#6d4df5;
 color:white;
+padding:12px 30px;
 border:none;
-border-radius:30px;
-font-size:16px;
+border-radius:20px;
+margin-top:20px;
+cursor:pointer;
+}
+
+.counter{
+margin-top:25px;
 }
 
 .footer{
-text-align:center;
-padding:50px;
-background:#d7c4ff;
-border-radius:25px;
 margin-top:80px;
+text-align:center;
+padding:30px;
 }
 
 .lotus{
@@ -241,11 +438,73 @@ width:70px;
 margin-bottom:10px;
 }
 
-.policies{
-margin-top:15px;
+.floaters{
+position:fixed;
+right:20px;
+top:40%;
 display:flex;
+flex-direction:column;
+gap:16px;
+}
+
+.floaters a{
+background:#5e3ed6;
+width:46px;
+height:46px;
+border-radius:50%;
+display:flex;
+align-items:center;
 justify-content:center;
-gap:20px;
+}
+
+.floaters img{
+width:22px;
+height:22px;
+filter:brightness(0) invert(1);
+}
+
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.popupBox{
+background:white;
+padding:30px;
+max-width:500px;
+border-radius:10px;
+}
+
+.close{
+float:right;
+background:none;
+border:none;
+font-size:18px;
+cursor:pointer;
+}
+
+@media(max-width:768px){
+
+.serviceGrid{
+flex-direction:column;
+align-items:center;
+}
+
+.logo{
+width:200px;
+}
+
+.hero h1{
+font-size:24px;
+}
+
 }
 
 `}</style>

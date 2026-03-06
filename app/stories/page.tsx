@@ -69,7 +69,8 @@ of life.
 <h3>Hina Khan</h3>
 
 <p className="subtitle">Actor • Story of Courage</p>
-
+<p> Your diagnosis does not define your destiny.</p>
+  
 <p>
 Hina Khan has spoken openly about her health challenges,
 showing the world that vulnerability and strength can
@@ -86,13 +87,17 @@ were silently fighting their own battles.
 
 <div className="story">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Sonali_Bendre_2018.jpg"/>
+<img src="https://images.mubicdn.net/images/cast_member/28424/cache-159661-1469083532/image-w856.jpg?size=800x"/>
 
 <div>
 
 <h3>Sonali Bendre</h3>
 
 <p className="subtitle">Actor • Metastatic Cancer Survivor</p>
+
+<p>
+"Strength isn't about never feeling afraid — it's about moving forward despite the fear."
+</p>
 
 <p>
 When Sonali Bendre shared her diagnosis publicly,
@@ -111,14 +116,15 @@ vulnerability can inspire strength and community.
 
 <div className="story">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Anurag_Basu_2019.jpg"/>
+<img src="https://tse3.mm.bing.net/th/id/OIP.ndZYNyOqk1q-I1C8PVbxFwAAAA?w=220&h=227&rs=1&pid=ImgDetMain&o=7&rm=3"/>
 
 <div>
 
 <h3>Anurag Basu</h3>
 
 <p className="subtitle">Director • Leukemia Survivor</p>
-
+<p> Hope can be stronger than even the most frightening diagnosis. </p>
+  
 <p>
 At 34, Anurag Basu was diagnosed with acute leukemia 
 and given very little chance of survival. Even during 
@@ -136,14 +142,16 @@ on to create some of India’s most loved films
 
 <div className="story">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Yuvraj_Singh_2011.jpg"/>
+<img src="https://cdn-wp.thesportsrush.com/2016/08/Yuvraj-Singh-hd-picture.jpg?w=3840&q=60"/>
 
 <div>
 
 <h3>Yuvraj Singh</h3>
 
 <p className="subtitle">Cricket Champion • Lung Cancer Survivor</p>
+<p> Cancer may challenge your body, but it cannot defeat your spirit.</p>
 
+  
 <p>
 Champions are not made only on the field. After the 
 2011 Cricket World Cup, Yuvraj Singh was diagnosed with
@@ -161,14 +169,14 @@ stronger.
 
 <div className="story">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Lisa_Ray_2011.jpg"/>
+<img src="https://tse1.mm.bing.net/th/id/OIP.TjU56N86yfjnkKp1ej95HQHaLG?rs=1&pid=ImgDetMain&o=7&rm=3"/>
 
 <div>
 
 <h3>Lisa Ray</h3>
 
 <p className="subtitle">Actor • Multiple Myeloma Survivor</p>
-
+<p>Every day you wake up is a victory worth celebrating.</p>
 <p>
 Lisa Ray was diagnosed with multiple myeloma, a rare blood cancer. 
 Through stem-cell transplant, meditation and resilience she 
@@ -184,14 +192,14 @@ living life fully despite illness.
 
   <div className="story">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Rakesh_Roshan.jpg"/>
+<img src="https://www.masala.com/cloud/2025/01/15/Rakesh-Roshan-1568x882.jpg"/>
 
 <div>
 
 <h3>Rakesh Roshan</h3>
 
 <p className="subtitle">Director • Throat Cancer Survivor</p>
-
+<p> Early action can turn fear into survival. </p>
 <p>
 A routine medical checkup revealed throat cancer for filmmaker 
 Rakesh Roshan. Early detection and timely treatment saved his 

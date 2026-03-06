@@ -407,6 +407,62 @@ filter:brightness(0) invert(1);
 
 
 
+/* STORY FORMAT IMPROVEMENTS */
+
+.stories{
+max-width:900px;
+margin:auto;
+}
+
+.story{
+display:flex;
+gap:20px;
+background:white;
+padding:20px;
+border-radius:14px;
+margin-bottom:24px;
+box-shadow:0 4px 14px rgba(0,0,0,0.06);
+align-items:flex-start;
+}
+
+.story img{
+width:95px;
+height:95px;
+border-radius:50%;
+object-fit:cover;
+flex-shrink:0;
+}
+
+.story h3{
+margin-bottom:4px;
+font-size:18px;
+}
+
+.subtitle{
+font-weight:600;
+font-size:13px;
+opacity:0.8;
+margin-bottom:10px;
+}
+
+.story p{
+font-size:14px;
+line-height:1.55;
+margin-bottom:10px;
+color:#4a3ca6;
+}
+
+.story p:first-of-type{
+font-weight:600;
+font-size:14px;
+color:#6d4df5;
+}
+
+.story div{
+max-width:600px;
+}
+
+
 /* MOBILE */
 
 @media(max-width:768px){

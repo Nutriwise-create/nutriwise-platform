@@ -280,31 +280,30 @@ oncologists or licensed healthcare professionals.
 <div className="floaters">
 
 <a href="https://wa.me/918320867088" target="_blank" rel="noopener noreferrer">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"/>
+<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"/>
 </a>
 
-<a href="https://instagram.com/nutriwise_26" target="_blank">
-<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"/>
+<a href="https://instagram.com/nutriwise_26" target="_blank" rel="noopener noreferrer">
+<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"/>
 </a>
 
-<a href="https://linkedin.com" target="_blank">
-<img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png"/>
+<a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"/>
 </a>
 
-<a href="https://youtube.com" target="_blank">
-<img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"/>
+<a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg"/>
 </a>
 
-<a href="https://x.com" target="_blank">
-<img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png"/>
+<a href="https://x.com" target="_blank" rel="noopener noreferrer">
+<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg"/>
 </a>
 
-<a href="mailto:join.nutriwise@outlook.com" target="_blank">
-<img src="https://cdn-icons-png.flaticon.com/512/561/561127.png"/>
+<a href="mailto:join.nutriwise@outlook.com" target="_blank" rel="noopener noreferrer">
+<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg"/>
 </a>
 
 </div>
-
 
 
 <style jsx>{`
@@ -464,7 +463,6 @@ justify-content:center;
 .floaters img{
 width:22px;
 height:22px;
-filter:brightness(0) invert(1);
 }
 
 .popup{

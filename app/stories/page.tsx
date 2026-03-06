@@ -62,7 +62,7 @@ of life.
 
 <div className="story">
 
-<img src="https://randomuser.me/api/portraits/women/44.jpg"/>
+<img src="https://tse1.mm.bing.net/th/id/OIP.AMcpSZilcUiZZjBqjPBygQHaFS?rs=1&pid=ImgDetMain&o=7&rm=3"/>
 
 <div>
 
@@ -77,15 +77,6 @@ coexist. Her courage inspired thousands of people who
 were silently fighting their own battles.
 </p>
 
-<div className="timeline">
-
-<span>Diagnosis</span>
-<div className="line"></div>
-<span>Treatment</span>
-<div className="line"></div>
-<span>Recovery</span>
-
-</div>
 
 </div>
 
@@ -95,30 +86,22 @@ were silently fighting their own battles.
 
 <div className="story">
 
-<img src="https://randomuser.me/api/portraits/women/65.jpg"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Sonali_Bendre_2018.jpg"/>
 
 <div>
 
 <h3>Sonali Bendre</h3>
 
-<p className="subtitle">Actor • Cancer Survivor</p>
+<p className="subtitle">Actor • Metastatic Cancer Survivor</p>
 
 <p>
-Sonali Bendre's journey reminded millions that hope can
-exist even in the darkest moments. Her openness about
-treatment and recovery created awareness and empathy
-across the world.
+When Sonali Bendre shared her diagnosis publicly,
+millions were shocked. Yet she faced treatment
+with grace and honesty.Through hospital updates, 
+reflections and courage, she reminded people that 
+vulnerability can inspire strength and community.
 </p>
 
-<div className="timeline">
-
-<span>Diagnosis</span>
-<div className="line"></div>
-<span>Treatment</span>
-<div className="line"></div>
-<span>Recovery</span>
-
-</div>
 
 </div>
 
@@ -128,29 +111,22 @@ across the world.
 
 <div className="story">
 
-<img src="https://randomuser.me/api/portraits/men/42.jpg"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Anurag_Basu_2019.jpg"/>
 
 <div>
 
 <h3>Anurag Basu</h3>
 
-<p className="subtitle">Director • Survivor</p>
+<p className="subtitle">Director • Leukemia Survivor</p>
 
 <p>
-Anurag Basu’s battle with leukemia became a powerful
-example of resilience. His recovery journey inspired many
-patients to keep believing in recovery.
+At 34, Anurag Basu was diagnosed with acute leukemia 
+and given very little chance of survival. Even during 
+treatment he kept imagining stories he still wanted to tell.
+That hope became his strength and after recovery he went 
+on to create some of India’s most loved films
 </p>
 
-<div className="timeline">
-
-<span>Diagnosis</span>
-<div className="line"></div>
-<span>Treatment</span>
-<div className="line"></div>
-<span>Recovery</span>
-
-</div>
 
 </div>
 
@@ -160,30 +136,22 @@ patients to keep believing in recovery.
 
 <div className="story">
 
-<img src="https://randomuser.me/api/portraits/men/55.jpg"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Yuvraj_Singh_2011.jpg"/>
 
 <div>
 
 <h3>Yuvraj Singh</h3>
 
-<p className="subtitle">Cricket Champion • Survivor</p>
+<p className="subtitle">Cricket Champion • Lung Cancer Survivor</p>
 
 <p>
-Yuvraj Singh’s fight against cancer became one of the
-most inspiring stories in sports. His determination and
-positive outlook helped him overcome tremendous
-challenges.
+Champions are not made only on the field. After the 
+2011 Cricket World Cup, Yuvraj Singh was diagnosed with
+a rare form of cancer. Chemotherapy left him exhausted
+and far from the sport he loved. But he refused to 
+surrender. With courage, discipline and hope, he returned
+stronger.
 </p>
-
-<div className="timeline">
-
-<span>Diagnosis</span>
-<div className="line"></div>
-<span>Treatment</span>
-<div className="line"></div>
-<span>Recovery</span>
-
-</div>
 
 </div>
 
@@ -193,30 +161,43 @@ challenges.
 
 <div className="story">
 
-<img src="https://randomuser.me/api/portraits/women/50.jpg"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Lisa_Ray_2011.jpg"/>
 
 <div>
 
-<h3>A Story of Hope</h3>
+<h3>Lisa Ray</h3>
 
-<p className="subtitle">Patient Inspiration</p>
+<p className="subtitle">Actor • Multiple Myeloma Survivor</p>
 
 <p>
-Every patient who walks the path of cancer treatment
-shows remarkable courage. With compassionate care,
-proper treatment and nutritional support, many people
-rediscover strength they never knew they had.
+Lisa Ray was diagnosed with multiple myeloma, a rare blood cancer. 
+Through stem-cell transplant, meditation and resilience she 
+entered remission and became an advocate for 
+living life fully despite illness.
 </p>
 
-<div className="timeline">
-
-<span>Diagnosis</span>
-<div className="line"></div>
-<span>Treatment</span>
-<div className="line"></div>
-<span>Recovery</span>
+</div>
 
 </div>
+
+
+
+  <div className="story">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Rakesh_Roshan.jpg"/>
+
+<div>
+
+<h3>Rakesh Roshan</h3>
+
+<p className="subtitle">Director • Throat Cancer Survivor</p>
+
+<p>
+A routine medical checkup revealed throat cancer for filmmaker 
+Rakesh Roshan. Early detection and timely treatment saved his 
+life, turning his story into a powerful reminder about
+preventive care
+</p>
 
 </div>
 

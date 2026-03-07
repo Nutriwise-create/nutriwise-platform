@@ -100,9 +100,13 @@ Small nourishment choices often make the biggest difference.
 
 <section className="ngo">
 
-<button onClick={()=>window.open("/dashboard/ngo","_blank")}>
+<Link href="/dashboard/ngo">
+
+<button>
 Click to Reach NGOs
 </button>
+
+</Link>
 
 </section>
 
@@ -113,7 +117,7 @@ Click to Reach NGOs
 <section className="features">
 
 
-<div className="feature">
+<div className="feature locked">
 
 <h3>What You Should Eat Next</h3>
 
@@ -122,10 +126,12 @@ Personalized diet suggestions based on treatment stage,
 nutritional needs and recovery support.
 </p>
 
+<p className="lockText">🔒 Unlock with Nutrition Plan</p>
+
 </div>
 
 
-<div className="feature">
+<div className="feature locked">
 
 <h3>Nutrition Counter</h3>
 
@@ -134,10 +140,12 @@ Track daily calories, hydration, protein intake and
 important nutrients required for recovery.
 </p>
 
+<p className="lockText">🔒 Unlock with Nutrition Plan</p>
+
 </div>
 
 
-<div className="feature">
+<div className="feature locked">
 
 <h3>Today's Healing Recipe Idea</h3>
 
@@ -146,10 +154,12 @@ Carefully designed recipes that are easy to digest,
 nutrient rich and supportive during treatment.
 </p>
 
+<p className="lockText">🔒 Unlock with Nutrition Plan</p>
+
 </div>
 
 
-<div className="feature">
+<div className="feature locked">
 
 <h3>Medicine Tracker</h3>
 
@@ -157,6 +167,8 @@ nutrient rich and supportive during treatment.
 Track medicines, doses and schedules so treatment
 remains organized and consistent.
 </p>
+
+<p className="lockText">🔒 Unlock with Nutrition Plan</p>
 
 </div>
 
@@ -172,6 +184,28 @@ remains organized and consistent.
 <button>
 Message Your Nutritionist
 </button>
+
+</section>
+
+
+
+{/* LOCKED FEATURE ACTION */}
+
+<section className="lockedPopup">
+
+<p>This feature is part of the nutrition plan.</p>
+
+<div className="popupButtons">
+
+<button className="payBtn">
+Pay Now
+</button>
+
+<button className="consultBtn">
+Book Consultation
+</button>
+
+</div>
 
 </section>
 
@@ -199,7 +233,9 @@ href="https://wa.me/918320867088"
 target="_blank"
 className="whatsapp"
 >
-<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"/>
+
+<img src="/whatsapp.png"/>
+
 </a>
 
 
@@ -269,7 +305,6 @@ border-radius:15px;
 max-width:650px;
 margin:auto;
 text-align:center;
-
 box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
@@ -290,7 +325,6 @@ background:white;
 padding:20px;
 border-radius:15px;
 width:300px;
-
 box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
@@ -298,19 +332,11 @@ box-shadow:0 5px 20px rgba(0,0,0,0.05);
 
 .scrollBox{
 height:120px;
-overflow:hidden;
+overflow-y:auto;
 display:flex;
 flex-direction:column;
 gap:10px;
-
-animation:scrollUp 10s linear infinite;
-}
-
-
-
-@keyframes scrollUp{
-0%{transform:translateY(0)}
-100%{transform:translateY(-50%)}
+padding-right:5px;
 }
 
 
@@ -335,7 +361,6 @@ cursor:pointer;
 
 .features{
 margin-top:60px;
-
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
@@ -347,8 +372,15 @@ gap:25px;
 background:white;
 padding:25px;
 border-radius:15px;
-
 box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+
+
+.lockText{
+margin-top:10px;
+font-size:14px;
+opacity:0.7;
 }
 
 
@@ -371,6 +403,46 @@ cursor:pointer;
 
 
 
+.lockedPopup{
+margin-top:40px;
+text-align:center;
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+
+
+.popupButtons{
+display:flex;
+gap:15px;
+justify-content:center;
+margin-top:10px;
+}
+
+
+
+.payBtn{
+background:#6d4df5;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:20px;
+}
+
+
+
+.consultBtn{
+background:#7b5cff;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:20px;
+}
+
+
+
 .footer{
 text-align:center;
 margin-top:80px;
@@ -389,13 +461,10 @@ margin-bottom:10px;
 position:fixed;
 right:20px;
 bottom:30px;
-
 width:50px;
 height:50px;
-
 background:#25D366;
 border-radius:50%;
-
 display:flex;
 align-items:center;
 justify-content:center;

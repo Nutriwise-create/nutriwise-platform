@@ -214,8 +214,6 @@ to access the right guidance during their healing journey.
 
 <button className="supportBtn">Donate Now</button>
 
-</div>
-
 </section>
 
 

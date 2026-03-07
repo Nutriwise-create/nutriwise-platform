@@ -1,8 +1,11 @@
 "use client"
 
 import Link from "next/link"
+import { useState } from "react"
 
 export default function Dashboard(){
+
+const [showPopup,setShowPopup] = useState(false)
 
 return(
 
@@ -48,7 +51,16 @@ Healing is not always visible — but it is happening."
 
 <section className="tip">
 
-<h3>⚗️ Care Cuddle</h3>
+<h3 className="careTitle">
+
+<img
+src="/pestle.png"
+className="pestle"
+/>
+
+⚗️ Care Cuddle
+
+</h3>
 
 <p>
 A gentle nutrition nudge to support your body today.
@@ -117,7 +129,7 @@ Click to Reach NGOs
 <section className="features">
 
 
-<div className="feature locked">
+<div className="feature">
 
 <h3>What You Should Eat Next</h3>
 
@@ -126,12 +138,17 @@ Personalized diet suggestions based on treatment stage,
 nutritional needs and recovery support.
 </p>
 
-<p className="lockText">🔒 Unlock with Nutrition Plan</p>
+<p
+className="lockText"
+onClick={()=>setShowPopup(true)}
+>
+🔒 Unlock with Nutrition Plan
+</p>
 
 </div>
 
 
-<div className="feature locked">
+<div className="feature">
 
 <h3>Nutrition Counter</h3>
 
@@ -140,12 +157,17 @@ Track daily calories, hydration, protein intake and
 important nutrients required for recovery.
 </p>
 
-<p className="lockText">🔒 Unlock with Nutrition Plan</p>
+<p
+className="lockText"
+onClick={()=>setShowPopup(true)}
+>
+🔒 Unlock with Nutrition Plan
+</p>
 
 </div>
 
 
-<div className="feature locked">
+<div className="feature">
 
 <h3>Today's Healing Recipe Idea</h3>
 
@@ -154,12 +176,17 @@ Carefully designed recipes that are easy to digest,
 nutrient rich and supportive during treatment.
 </p>
 
-<p className="lockText">🔒 Unlock with Nutrition Plan</p>
+<p
+className="lockText"
+onClick={()=>setShowPopup(true)}
+>
+🔒 Unlock with Nutrition Plan
+</p>
 
 </div>
 
 
-<div className="feature locked">
+<div className="feature">
 
 <h3>Medicine Tracker</h3>
 
@@ -168,7 +195,12 @@ Track medicines, doses and schedules so treatment
 remains organized and consistent.
 </p>
 
-<p className="lockText">🔒 Unlock with Nutrition Plan</p>
+<p
+className="lockText"
+onClick={()=>setShowPopup(true)}
+>
+🔒 Unlock with Nutrition Plan
+</p>
 
 </div>
 
@@ -189,25 +221,44 @@ Message Your Nutritionist
 
 
 
-{/* LOCKED FEATURE ACTION */}
+{/* POPUP */}
 
-<section className="lockedPopup">
+{showPopup && (
+
+<div className="popupOverlay">
+
+<div className="popupBox">
 
 <p>This feature is part of the nutrition plan.</p>
 
 <div className="popupButtons">
 
+<Link href="/plans">
 <button className="payBtn">
 Pay Now
 </button>
+</Link>
 
+<Link href="/book-consultation">
 <button className="consultBtn">
 Book Consultation
+</button>
+</Link>
+
+</div>
+
+<button
+className="closePopup"
+onClick={()=>setShowPopup(false)}
+>
+Close
 </button>
 
 </div>
 
-</section>
+</div>
+
+)}
 
 
 
@@ -228,15 +279,19 @@ with compassionate nutritional guidance.
 
 {/* WHATSAPP FLOATER */}
 
-<a
-href="https://wa.me/918320867088"
-target="_blank"
-className="whatsapp"
+<div className="floaters">
+
+<a 
+href="https://wa.me/918320867088" 
+target="_blank" 
+rel="noopener noreferrer"
 >
 
-<img src="/whatsapp.png"/>
+<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"/>
 
 </a>
+
+</div>
 
 
 
@@ -245,7 +300,6 @@ className="whatsapp"
 .page{
 font-family:Poppins;
 padding:40px;
-
 background:linear-gradient(
 180deg,
 #fff7fb,
@@ -253,25 +307,18 @@ background:linear-gradient(
 #efe8ff,
 #fdf4ff
 );
-
 color:#4a3ca6;
 }
-
-
 
 .nav{
 display:flex;
 justify-content:space-between;
 }
 
-
-
 .links{
 display:flex;
 gap:25px;
 }
-
-
 
 .logoWrap{
 display:flex;
@@ -279,14 +326,10 @@ justify-content:center;
 margin:30px 0;
 }
 
-
-
 .logo{
 width:220px;
 filter:drop-shadow(0 0 25px rgba(200,150,255,0.6));
 }
-
-
 
 .quote{
 text-align:center;
@@ -295,8 +338,6 @@ margin:auto;
 margin-bottom:40px;
 font-size:18px;
 }
-
-
 
 .tip{
 background:white;
@@ -308,7 +349,17 @@ text-align:center;
 box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
+.careTitle{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+}
 
+.pestle{
+width:28px;
+height:28px;
+}
 
 .infoSection{
 display:flex;
@@ -318,8 +369,6 @@ margin-top:50px;
 flex-wrap:wrap;
 }
 
-
-
 .box{
 background:white;
 padding:20px;
@@ -328,25 +377,18 @@ width:300px;
 box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
-
-
 .scrollBox{
 height:120px;
 overflow-y:auto;
 display:flex;
 flex-direction:column;
 gap:10px;
-padding-right:5px;
 }
-
-
 
 .ngo{
 text-align:center;
 margin-top:40px;
 }
-
-
 
 .ngo button{
 background:#7b5cff;
@@ -357,16 +399,12 @@ border-radius:20px;
 cursor:pointer;
 }
 
-
-
 .features{
 margin-top:60px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
 }
-
-
 
 .feature{
 background:white;
@@ -375,22 +413,17 @@ border-radius:15px;
 box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
-
-
 .lockText{
 margin-top:10px;
 font-size:14px;
-opacity:0.7;
+opacity:0.8;
+cursor:pointer;
 }
-
-
 
 .nutritionist{
 text-align:center;
 margin-top:50px;
 }
-
-
 
 .nutritionist button{
 background:#6d4df5;
@@ -401,27 +434,47 @@ border-radius:25px;
 cursor:pointer;
 }
 
-
-
-.lockedPopup{
-margin-top:40px;
+.footer{
 text-align:center;
-background:white;
-padding:20px;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
+margin-top:80px;
+}
+
+.lotus{
+width:70px;
+margin-bottom:10px;
 }
 
 
+/* POPUP */
+
+.popupOverlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.35);
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:1000;
+}
+
+.popupBox{
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+max-width:320px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
 
 .popupButtons{
 display:flex;
 gap:15px;
 justify-content:center;
-margin-top:10px;
+margin-top:15px;
 }
-
-
 
 .payBtn{
 background:#6d4df5;
@@ -431,8 +484,6 @@ border:none;
 border-radius:20px;
 }
 
-
-
 .consultBtn{
 background:#7b5cff;
 color:white;
@@ -441,44 +492,45 @@ border:none;
 border-radius:20px;
 }
 
-
-
-.footer{
-text-align:center;
-margin-top:80px;
+.closePopup{
+margin-top:15px;
+background:none;
+border:none;
+color:#6d4df5;
+cursor:pointer;
 }
 
 
+/* FLOATING WHATSAPP */
 
-.lotus{
-width:70px;
-margin-bottom:10px;
-}
-
-
-
-.whatsapp{
+.floaters{
 position:fixed;
 right:20px;
 bottom:30px;
-width:50px;
-height:50px;
-background:#25D366;
+z-index:999;
+}
+
+.floaters a{
+background:linear-gradient(135deg,#7b5cff,#ff9bd2);
+width:48px;
+height:48px;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
+box-shadow:0 6px 20px rgba(120,90,255,0.35);
+transition:0.3s;
 }
 
+.floaters a:hover{
+transform:scale(1.1);
+}
 
-
-.whatsapp img{
-width:24px;
-height:24px;
+.floaters img{
+width:20px;
+height:20px;
 filter:brightness(0) invert(1);
 }
-
-
 
 @media(max-width:768px){
 

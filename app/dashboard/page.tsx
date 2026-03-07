@@ -54,8 +54,9 @@ Healing is not always visible — but it is happening."
 <h3 className="careTitle">
 
 <img
-src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Mortar_and_pestle_icon.svg/512px-Mortar_and_pestle_icon.svg.png"
+src="/mortar.png"
 className="careImage"
+alt="Care Cuddle"
 />
 
 Care Cuddle
@@ -121,11 +122,7 @@ Small nourishment choices often make the biggest difference.
 <section className="ngo">
 
 <Link href="/dashboard/ngo">
-
-<button>
-Click to Reach NGOs
-</button>
-
+<button>Click to Reach NGOs</button>
 </Link>
 
 </section>
@@ -347,8 +344,13 @@ gap:10px;
 }
 
 .careImage{
-width:28px;
-height:28px;
+width:32px;
+height:32px;
+border-radius:50%;
+background:white;
+padding:4px;
+box-shadow:0 3px 8px rgba(0,0,0,0.1);
+object-fit:cover;
 }
 
 .infoSection{

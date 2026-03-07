@@ -75,6 +75,7 @@ so treatment can work more effectively and helps patients maintain
 quality of life during the healing journey.
 </p>
 
+
 </section>
 
 
@@ -116,6 +117,19 @@ and recovery.
 
 </div>
 
+  
+<div className="consultCTA">
+
+<Link href="/consultation">
+<button className="consultBtn">Book Consultation</button>
+</Link>
+
+<Link href="/login">
+<button className="accountBtn">Create Free Account</button>
+</Link>
+
+</div>
+  
 </section>
 
 
@@ -180,24 +194,26 @@ and recovery.
 
 
 
-{/* SUPPORT PATIENT */}
+{/* DONATION */}
 
 <section className="support">
 
-<h2>💜 Support a Patient 💜</h2>
+<h2>💜 Donate Now 💜</h2>
 
 <p>
-Many patients undergoing cancer treatment struggle
-to access structured nutritional guidance.
-Your support can help someone receive the care and
-guidance they deserve during a difficult journey.
+Let us take a pledge together to reach every cancer patient
+who needs compassionate nutritional guidance during treatment
+and recovery.
 </p>
 
-<button className="supportBtn">Support Now</button>
+<p>
+Your support helps NutriWise extend structured nutrition care,
+strength and hope to patients who may otherwise struggle
+to access the right guidance during their healing journey.
+</p>
 
-<div className="counter">
-<h3>10+</h3>
-<p>Patients Supported Till Now</p>
+<button className="supportBtn">Donate Now</button>
+
 </div>
 
 </section>
@@ -385,6 +401,46 @@ margin:80px auto;
 line-height:1.8;
 }
 
+.consultCTA{
+display:flex;
+justify-content:center;
+gap:20px;
+margin-top:35px;
+flex-wrap:wrap;
+}
+
+.consultBtn{
+background:#7b5cff;
+color:white;
+padding:14px 32px;
+border:none;
+border-radius:25px;
+font-size:16px;
+cursor:pointer;
+box-shadow:0 6px 20px rgba(120,90,255,0.3);
+transition:0.3s;
+}
+
+.consultBtn:hover{
+transform:scale(1.05);
+}
+
+.accountBtn{
+background:white;
+color:#7b5cff;
+padding:14px 32px;
+border:2px solid #7b5cff;
+border-radius:25px;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.accountBtn:hover{
+background:#7b5cff;
+color:white;
+}
+
 .services{
 text-align:center;
 margin:80px 0;
@@ -419,8 +475,8 @@ text-align:center;
 display:flex;
 gap:25px;
 padding:20px;
-overflow-x:auto;
-scroll-behavior:smooth;
+overflow:hidden;
+animation:scrollLoop 30s linear infinite;
 }
 
 .scroll::-webkit-scrollbar{
@@ -430,6 +486,15 @@ display:none;
 @keyframes scroll{
 0%{transform:translateX(0)}
 100%{transform:translateX(-50%)}
+}
+
+@keyframes scrollLoop{
+0%{
+transform:translateX(0);
+}
+100%{
+transform:translateX(-50%);
+}
 }
 
 .card{

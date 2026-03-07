@@ -51,7 +51,16 @@ Healing is not always visible — but it is happening."
 
 <section className="tip">
 
-<h3>⚗️ Care Cuddle</h3>
+<h3 className="careTitle">
+
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Mortar_and_pestle_icon.svg/512px-Mortar_and_pestle_icon.svg.png"
+className="careImage"
+/>
+
+Care Cuddle
+
+</h3>
 
 <p>
 A gentle nutrition nudge to support your body today.
@@ -65,9 +74,11 @@ Small nourishment choices often make the biggest difference.
 
 <section className="infoSection">
 
-<div className="box">
+<div className="infoColumn">
 
-<h3>Announcements</h3>
+<h3 className="infoTitle">Announcements</h3>
+
+<div className="box">
 
 <div className="scrollBox">
 
@@ -80,10 +91,14 @@ Small nourishment choices often make the biggest difference.
 
 </div>
 
+</div>
+
+
+<div className="infoColumn">
+
+<h3 className="infoTitle">Helpful Articles</h3>
 
 <div className="box">
-
-<h3>Helpful Articles</h3>
 
 <div className="scrollBox">
 
@@ -91,6 +106,8 @@ Small nourishment choices often make the biggest difference.
 <p>Managing appetite loss during treatment</p>
 <p>Protein intake for recovery</p>
 <p>Foods that support healing</p>
+
+</div>
 
 </div>
 
@@ -128,10 +145,7 @@ Personalized diet suggestions based on treatment stage,
 nutritional needs and recovery support.
 </p>
 
-<p
-className="lockText"
-onClick={()=>setShowPopup(true)}
->
+<p className="lockText" onClick={()=>setShowPopup(true)}>
 🔒 Unlock with Nutrition Plan
 </p>
 
@@ -147,10 +161,7 @@ Track daily calories, hydration, protein intake and
 important nutrients required for recovery.
 </p>
 
-<p
-className="lockText"
-onClick={()=>setShowPopup(true)}
->
+<p className="lockText" onClick={()=>setShowPopup(true)}>
 🔒 Unlock with Nutrition Plan
 </p>
 
@@ -166,10 +177,7 @@ Carefully designed recipes that are easy to digest,
 nutrient rich and supportive during treatment.
 </p>
 
-<p
-className="lockText"
-onClick={()=>setShowPopup(true)}
->
+<p className="lockText" onClick={()=>setShowPopup(true)}>
 🔒 Unlock with Nutrition Plan
 </p>
 
@@ -185,10 +193,7 @@ Track medicines, doses and schedules so treatment
 remains organized and consistent.
 </p>
 
-<p
-className="lockText"
-onClick={()=>setShowPopup(true)}
->
+<p className="lockText" onClick={()=>setShowPopup(true)}>
 🔒 Unlock with Nutrition Plan
 </p>
 
@@ -202,10 +207,7 @@ onClick={()=>setShowPopup(true)}
 
 <section className="nutritionist">
 
-<p
-className="lockText"
-onClick={()=>setShowPopup(true)}
->
+<p className="lockText" onClick={()=>setShowPopup(true)}>
 🔒 Message Your Nutritionist
 </p>
 
@@ -226,15 +228,11 @@ onClick={()=>setShowPopup(true)}
 <div className="popupButtons">
 
 <Link href="/plans">
-<button className="payBtn">
-Pay Now
-</button>
+<button className="payBtn">Pay Now</button>
 </Link>
 
 <Link href="/book-consultation">
-<button className="consultBtn">
-Book Consultation
-</button>
+<button className="consultBtn">Book Consultation</button>
 </Link>
 
 </div>
@@ -273,9 +271,9 @@ with compassionate nutritional guidance.
 
 <div className="floaters">
 
-<a 
-href="https://wa.me/918320867088" 
-target="_blank" 
+<a
+href="https://wa.me/918320867088"
+target="_blank"
 rel="noopener noreferrer"
 >
 
@@ -341,21 +339,42 @@ text-align:center;
 box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
+.careTitle{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+}
+
+.careImage{
+width:28px;
+height:28px;
+}
+
 .infoSection{
 display:flex;
-gap:30px;
+gap:40px;
 justify-content:center;
 margin-top:50px;
 flex-wrap:wrap;
+}
+
+.infoColumn{
+width:300px;
+}
+
+.infoTitle{
+margin-bottom:10px;
+font-weight:600;
 }
 
 .box{
 background:white;
 padding:20px;
 border-radius:15px;
-width:300px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
+height:120px;
 overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
 .scrollBox{
@@ -420,8 +439,6 @@ width:70px;
 margin-bottom:10px;
 }
 
-/* POPUP */
-
 .popupOverlay{
 position:fixed;
 top:0;
@@ -474,8 +491,6 @@ border:none;
 color:#6d4df5;
 cursor:pointer;
 }
-
-/* FLOATING WHATSAPP */
 
 .floaters{
 position:fixed;

@@ -51,16 +51,7 @@ Healing is not always visible — but it is happening."
 
 <section className="tip">
 
-<h3 className="careTitle">
-
-<img
-src="/pestle.png"
-className="pestle"
-/>
-
-⚗️ Care Cuddle
-
-</h3>
+<h3>⚗️ Care Cuddle</h3>
 
 <p>
 A gentle nutrition nudge to support your body today.
@@ -70,7 +61,7 @@ Small nourishment choices often make the biggest difference.
 </section>
 
 
-{/* ANNOUNCEMENT + ARTICLES */}
+{/* ANNOUNCEMENTS + ARTICLES */}
 
 <section className="infoSection">
 
@@ -127,7 +118,6 @@ Click to Reach NGOs
 {/* FEATURES GRID */}
 
 <section className="features">
-
 
 <div className="feature">
 
@@ -204,7 +194,6 @@ onClick={()=>setShowPopup(true)}
 
 </div>
 
-
 </section>
 
 
@@ -213,9 +202,12 @@ onClick={()=>setShowPopup(true)}
 
 <section className="nutritionist">
 
-<button>
-Message Your Nutritionist
-</button>
+<p
+className="lockText"
+onClick={()=>setShowPopup(true)}
+>
+🔒 Message Your Nutritionist
+</p>
 
 </section>
 
@@ -349,18 +341,6 @@ text-align:center;
 box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
-.careTitle{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:10px;
-}
-
-.pestle{
-width:28px;
-height:28px;
-}
-
 .infoSection{
 display:flex;
 gap:30px;
@@ -375,14 +355,19 @@ padding:20px;
 border-radius:15px;
 width:300px;
 box-shadow:0 5px 20px rgba(0,0,0,0.05);
+overflow:hidden;
 }
 
 .scrollBox{
-height:120px;
-overflow-y:auto;
 display:flex;
 flex-direction:column;
 gap:10px;
+animation:autoScroll 12s linear infinite;
+}
+
+@keyframes autoScroll{
+0%{transform:translateY(0)}
+100%{transform:translateY(-50%)}
 }
 
 .ngo{
@@ -402,7 +387,7 @@ cursor:pointer;
 .features{
 margin-top:60px;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:1fr 1fr;
 gap:25px;
 }
 
@@ -425,15 +410,6 @@ text-align:center;
 margin-top:50px;
 }
 
-.nutritionist button{
-background:#6d4df5;
-color:white;
-padding:14px 30px;
-border:none;
-border-radius:25px;
-cursor:pointer;
-}
-
 .footer{
 text-align:center;
 margin-top:80px;
@@ -443,7 +419,6 @@ margin-top:80px;
 width:70px;
 margin-bottom:10px;
 }
-
 
 /* POPUP */
 
@@ -500,7 +475,6 @@ color:#6d4df5;
 cursor:pointer;
 }
 
-
 /* FLOATING WHATSAPP */
 
 .floaters{
@@ -545,6 +519,10 @@ width:180px;
 .infoSection{
 flex-direction:column;
 align-items:center;
+}
+
+.features{
+grid-template-columns:1fr;
 }
 
 }

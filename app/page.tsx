@@ -674,17 +674,24 @@ width:200px;
 .policies{
 display:flex;
 justify-content:center;
-gap:20px;
-margin:15px 0;
+gap:15px;
+margin-bottom:10px;
 flex-wrap:wrap;
 }
 
 .policies button{
 background:none;
 border:none;
-color:#6d4df5;
-cursor:pointer;
+color:#4a3ca6;
 font-size:14px;
+cursor:pointer;
+padding:6px 12px;
+transition:0.3s;
+}
+
+.policies button:hover{
+color:#7b5cff;
+text-decoration:underline;
 }
 
 .hero h1{

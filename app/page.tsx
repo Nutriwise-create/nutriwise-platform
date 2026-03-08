@@ -235,7 +235,6 @@ to access the right guidance during their healing journey.
 <button className="supportBtn" onClick={()=>setPolicy("donate")}>
 Donate Now
 </button>
-</Link>
 
 </section>
 

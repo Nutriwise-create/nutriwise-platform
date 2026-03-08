@@ -424,19 +424,19 @@ transform:scale(1.05);
 }
 
 .accountBtn{
-background:white;
-color:#7b5cff;
+background:#7b5cff;
+color:white;
 padding:14px 32px;
-border:2px solid #7b5cff;
+border:none;
 border-radius:25px;
 font-size:16px;
 cursor:pointer;
+box-shadow:0 6px 20px rgba(120,90,255,0.3);
 transition:0.3s;
 }
 
 .accountBtn:hover{
-background:#7b5cff;
-color:white;
+transform:scale(1.05);
 }
 
 .services{
@@ -474,7 +474,8 @@ display:flex;
 gap:25px;
 padding:20px;
 overflow:hidden;
-animation:scrollLoop 30s linear infinite;
+width:max-content;
+animation:scrollLoop 35s linear infinite;
 }
 
 .scroll::-webkit-scrollbar{
@@ -491,12 +492,12 @@ display:none;
 transform:translateX(0);
 }
 100%{
-transform:translateX(-50%);
+transform:translateX(-100%);
 }
 }
 
 .card{
-min-width:260px;
+width:260px;
 flex-shrink:0;
 background:white;
 padding:20px;

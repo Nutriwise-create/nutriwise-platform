@@ -1,8 +1,10 @@
 "use client"
 
 import Link from "next/link"
+import { useState } from "react"
 
 export default function Stories(){
+const [policy,setPolicy]=useState("")
 
 return(
 
@@ -213,13 +215,40 @@ preventive care
 
 </section>
 
+{/* SHARE STORY */}
 
+<section className="shareStory">
+
+<h2>Share Your Story</h2>
+
+<p>
+Your journey may inspire someone who is currently fighting
+their own battle. By sharing your experience, you may give
+hope to someone who needs it most.
+</p>
+
+<button
+className="shareBtn"
+onClick={()=>setPolicy("share")}
+> 
+ShareYour Story to Inspire Others
+</button>
+
+</section>
 
 {/* FOOTER */}
 
 <footer className="footer">
 
 <img src="/lotus.png" className="lotus"/>
+
+<div className="policies">
+
+<button onClick={()=>setPolicy("privacy")}>Privacy Policy</button>
+<button onClick={()=>setPolicy("refund")}>Refund Policy</button>
+<button onClick={()=>setPolicy("legal")}>Legal Disclaimer</button>
+
+</div>
 
 <p>
 NutriWise stands beside patients and families, offering
@@ -229,7 +258,72 @@ stage of their journey.
 
 </footer>
 
+{/* POLICY POPUP */}
 
+{policy && (
+
+<div className="popup">
+
+<div className="popupBox">
+
+<button className="close" onClick={()=>setPolicy("")}>✕</button>
+
+
+{policy==="share" && (
+<div>
+
+<h3>Share Your Story</h3>
+
+<p>
+If you would like your journey to inspire others,
+please send your story to:
+</p>
+
+<p><b>join.nutriwise@outlook.com</b></p>
+
+</div>
+)}
+
+
+
+{policy==="privacy" && (
+<p>
+NutriWise respects and protects the privacy of all individuals
+who interact with our platform. Any personal information shared
+with NutriWise including name, contact details, medical
+information or consultation requests is used strictly for the
+purpose of providing nutritional consultation and support
+services.
+
+NutriWise does not sell, rent or distribute personal data to
+third parties.
+</p>
+)}
+
+
+
+{policy==="refund" && (
+<p>
+Refund requests may be considered if submitted within
+10 calendar days from the date of payment.
+</p>
+)}
+
+
+
+{policy==="legal" && (
+<p>
+NutriWise provides evidence-based nutritional guidance
+intended to support individuals undergoing cancer treatment
+or recovery and does not replace medical treatment.
+</p>
+)}
+
+</div>
+
+</div>
+
+)}
 
 {/* FLOATERS */}
 
@@ -462,6 +556,70 @@ color:#6d4df5;
 max-width:600px;
 }
 
+.shareStory{
+text-align:center;
+max-width:700px;
+margin:80px auto;
+}
+
+.shareBtn{
+background:#7b5cff;
+color:white;
+padding:14px 32px;
+border:none;
+border-radius:25px;
+font-size:16px;
+cursor:pointer;
+margin-top:20px;
+}
+
+.policies{
+display:flex;
+justify-content:center;
+gap:15px;
+margin-bottom:10px;
+flex-wrap:wrap;
+}
+
+.policies button{
+background:none;
+border:none;
+color:#4a3ca6;
+font-size:14px;
+cursor:pointer;
+}
+
+.policies button:hover{
+color:#7b5cff;
+text-decoration:underline;
+}
+
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.popupBox{
+background:white;
+padding:30px;
+max-width:500px;
+border-radius:10px;
+}
+
+.close{
+float:right;
+background:none;
+border:none;
+font-size:18px;
+cursor:pointer;
+}
 
 /* MOBILE */
 

@@ -212,7 +212,9 @@ strength and hope to patients who may otherwise struggle
 to access the right guidance during their healing journey.
 </p>
 
+<Link href="/donate">
 <button className="supportBtn">Donate Now</button>
+</Link>
 
 </section>
 

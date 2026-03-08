@@ -5,8 +5,8 @@ import { useState } from "react"
 
 export default function Login(){
 
-const [policy,setPolicy]=useState("")
 const [signup,setSignup]=useState(false)
+const [policy,setPolicy]=useState("")
 
 return(
 
@@ -62,7 +62,10 @@ every step of your journey.
 <button className="loginBtn">Login</button>
 
 <p className="signup">
-New here? <span className="createLink" onClick={()=>setSignup(true)}>Create an account</span>
+New here? 
+<button className="signupBtn" onClick={()=>setSignup(true)}>
+Create an account
+</button>
 </p>
 
 </div>
@@ -131,7 +134,7 @@ compassionate oncology nutrition guidance.
 
 
 
-{/* POLICY POPUP */}
+{/* POLICY POPUPS */}
 
 {policy && (
 
@@ -143,63 +146,23 @@ compassionate oncology nutrition guidance.
 
 {policy==="privacy" && (
 <p>
-NutriWise respects and protects the privacy of all individuals
-who interact with our platform. Any personal information shared
-with NutriWise including name, contact details, medical
-information or consultation requests is used strictly for the
-purpose of providing nutritional consultation and support
-services.
-
-NutriWise does not sell, rent or distribute personal data to
-third parties. Information may only be used internally for
-consultation coordination, service improvement or compliance
-with applicable regulations.
-
-All reasonable security measures are implemented to protect
-user data. By using this platform you consent to the collection
-and use of information in accordance with this privacy policy.
+NutriWise respects and protects the privacy of all individuals who interact with our platform. 
+Personal information shared with NutriWise including name, contact details and consultation 
+information is used strictly for providing nutritional support services.
 </p>
 )}
 
 {policy==="refund" && (
 <p>
-NutriWise aims to provide transparent and fair service policies.
-
-Refund requests may be considered if submitted within
-10 calendar days from the date of payment, provided that
-consultation services have not already been completed or
-substantially delivered.
-
-Refund requests will be reviewed by the NutriWise team to
-prevent misuse of services. If consultation has already been
-provided, scheduled sessions have been attended, or customized
-nutrition plans have been delivered, refunds may not be
-eligible.
-
-Approved refunds will be processed through the original payment
-method within a reasonable processing period.
-
-NutriWise reserves the right to decline refund requests that do
-not meet the stated conditions.
+Refund requests may be considered within 10 days of payment provided consultation services 
+have not already been delivered or substantially completed.
 </p>
 )}
 
 {policy==="legal" && (
 <p>
-NutriWise provides evidence-based nutritional guidance intended
-to support individuals undergoing cancer treatment or recovery.
-
-The information and consultation services provided by NutriWise
-are for supportive care purposes only and do not replace medical
-diagnosis, treatment or professional advice provided by
-oncologists, physicians or licensed healthcare providers.
-
-Patients should always follow the guidance of their treating
-medical professionals regarding treatment decisions.
-
-NutriWise shall not be held liable for medical outcomes resulting
-from the use or interpretation of nutritional guidance provided
-through the platform.
+NutriWise provides evidence-based nutrition guidance to support patients undergoing treatment. 
+Our services do not replace medical advice from oncologists or healthcare professionals.
 </p>
 )}
 
@@ -320,9 +283,12 @@ text-align:center;
 font-size:14px;
 }
 
-.createLink{
-color:#7b5cff;
+.signupBtn{
+background:none;
+border:none;
+color:#5e3ed6;
 cursor:pointer;
+font-weight:600;
 }
 
 .footer{
@@ -330,6 +296,11 @@ margin-top:80px;
 text-align:center;
 padding:40px;
 background:linear-gradient(180deg,#f3ecff,#efe8ff);
+}
+
+.lotus{
+width:70px;
+margin-bottom:10px;
 }
 
 .policies{
@@ -345,17 +316,6 @@ background:none;
 border:none;
 color:#4a3ca6;
 cursor:pointer;
-font-size:14px;
-}
-
-.policies button:hover{
-text-decoration:underline;
-color:#7b5cff;
-}
-
-.lotus{
-width:70px;
-margin-bottom:10px;
 }
 
 .popup{
@@ -373,19 +333,30 @@ justify-content:center;
 .popupBox{
 background:white;
 padding:30px;
-max-width:420px;
-border-radius:12px;
-display:flex;
-flex-direction:column;
-gap:12px;
+max-width:400px;
+border-radius:10px;
+width:100%;
 }
 
 .close{
-align-self:flex-end;
+float:right;
 background:none;
 border:none;
 font-size:18px;
 cursor:pointer;
+}
+
+.popupLotus{
+width:90px;
+display:block;
+margin:0 auto 10px auto;
+}
+
+.popupText{
+font-size:13px;
+text-align:center;
+margin-bottom:15px;
+opacity:0.8;
 }
 
 .floaters{
@@ -414,15 +385,19 @@ filter:brightness(0) invert(1);
 }
 
 @media(max-width:768px){
+
 .page{
 padding:20px;
 }
+
 .logo{
 width:200px;
 }
+
 .loginCard{
 padding:30px;
 }
+
 }
 
 `}</style>

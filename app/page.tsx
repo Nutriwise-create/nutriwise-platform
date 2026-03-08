@@ -12,7 +12,7 @@ return(
 <main className="page">
 
 {/* NAVBAR */}
-f
+
 <nav className="nav">
 
 <div></div>

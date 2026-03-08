@@ -660,17 +660,6 @@ font-size:18px;
 cursor:pointer;
 }
 
-@media(max-width:768px){
-
-.serviceGrid{
-flex-direction:column;
-align-items:center;
-}
-
-.logo{
-width:200px;
-}
-
 .policies{
 display:flex;
 justify-content:center;
@@ -693,6 +682,18 @@ transition:0.3s;
 color:#7b5cff;
 text-decoration:underline;
 }
+
+@media(max-width:768px){
+
+.serviceGrid{
+flex-direction:column;
+align-items:center;
+}
+
+.logo{
+width:200px;
+}
+
 
 .hero h1{
 font-size:24px;

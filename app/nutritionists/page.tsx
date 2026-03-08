@@ -379,10 +379,11 @@ margin-bottom:60px;
 
 .team{
 display:grid;
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
 max-width:1000px;
 margin:auto;
+justify-items:center;
 }
 
 .card{
@@ -433,9 +434,24 @@ border-radius:20px;
 .policies{
 display:flex;
 justify-content:center;
-gap:10px;
+gap:15px;
 margin-bottom:10px;
 flex-wrap:wrap;
+}
+
+.policies button{
+background:none;
+border:none;
+color:#4a3ca6;
+font-size:14px;
+cursor:pointer;
+padding:6px 12px;
+transition:0.3s;
+}
+
+.policies button:hover{
+color:#7b5cff;
+text-decoration:underline;
 }
 
 .lotus{
